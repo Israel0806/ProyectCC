@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Intento1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Intento1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="C:/Users/israe/Desktop/Semestre II/CC I/PROYECTO FINAL/INTENTOS/Intento1" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Intento1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="C:/Users/israe/Desktop/Semestre II/CC I/PROYECTO FINAL/INTENTOS/Intento1/" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Audifonos.h" />
+		<Unit filename="include/Clientes.h" />
+		<Unit filename="include/Computadora.h" />
+		<Unit filename="include/Impresoras.h" />
+		<Unit filename="include/Producto.h" />
+		<Unit filename="include/Software.h" />
+		<Unit filename="include/TV.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Audifonos.cpp" />
+		<Unit filename="src/Clientes.cpp" />
+		<Unit filename="src/Computadora.cpp" />
+		<Unit filename="src/Impresoras.cpp" />
+		<Unit filename="src/Producto.cpp" />
+		<Unit filename="src/Software.cpp" />
+		<Unit filename="src/TV.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

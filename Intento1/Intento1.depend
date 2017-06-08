@@ -1,0 +1,386 @@
+# depslib dependency file v1.0
+1494540994 source:c:\users\israe\desktop\semestre ii\cc i\proyecto final\intentos\intento1\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1494540984 c:\users\israe\desktop\semestre ii\cc i\proyecto final\intentos\intento1\clientes.h
+	<iostream>
+
+1494540724 source:c:\users\israe\desktop\semestre ii\cc i\proyecto final\intentos\intento1\main.cpp
+	<iostream>
+	"Clientes.h"
+
+1494613772 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1494613772 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\clientes.h
+	<iostream>
+
+1496367646 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<stdlib.h>
+
+1494869341 source:c:\users\israe\desktop\intento1\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1494857816 c:\users\israe\desktop\intento1\clientes.h
+	<iostream>
+
+1494869504 source:c:\users\israe\desktop\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	"Clientes.h"
+	"Producto.h"
+
+1494868503 c:\users\israe\desktop\intento1\producto.h
+	<iostream>
+
+1494868932 source:c:\users\israe\desktop\intento1\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1495824779 source:c:\users\israe\desktop\new folder (2)\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<stdlib.h>
+
+1495823155 c:\users\israe\desktop\new folder (2)\intento1\include\clientes.h
+	<iostream>
+
+1495823787 c:\users\israe\desktop\new folder (2)\intento1\include\producto.h
+	<iostream>
+
+1495824344 c:\users\israe\desktop\new folder (2)\intento1\include\audifonos.h
+	"Producto.h"
+
+1495824344 c:\users\israe\desktop\new folder (2)\intento1\include\impresoras.h
+	"Producto.h"
+
+1495824647 c:\users\israe\desktop\new folder (2)\intento1\include\software.h
+	"Producto.h"
+
+1495824363 c:\users\israe\desktop\new folder (2)\intento1\include\tv.h
+	"Producto.h"
+
+1495824418 c:\users\israe\desktop\new folder (2)\intento1\include\computadora.h
+	"Producto.h"
+
+1495824344 source:c:\users\israe\desktop\new folder (2)\intento1\src\audifonos.cpp
+	"Audifonos.h"
+
+1495822837 source:c:\users\israe\desktop\new folder (2)\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1495824445 source:c:\users\israe\desktop\new folder (2)\intento1\src\computadora.cpp
+	"Computadora.h"
+
+1495824562 source:c:\users\israe\desktop\new folder (2)\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1495823697 source:c:\users\israe\desktop\new folder (2)\intento1\src\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1495824647 source:c:\users\israe\desktop\new folder (2)\intento1\src\software.cpp
+	"Software.h"
+
+1495824710 source:c:\users\israe\desktop\new folder (2)\intento1\src\tv.cpp
+	"TV.h"
+
+1496241253 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\include\clientes.h
+	<iostream>
+
+1496241253 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\include\producto.h
+	<iostream>
+
+1496367646 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\include\audifonos.h
+	"Producto.h"
+
+1496241253 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\include\impresoras.h
+	"Producto.h"
+
+1496241253 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\include\software.h
+	"Producto.h"
+
+1496241253 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\include\tv.h
+	"Producto.h"
+
+1496241253 c:\users\israe\desktop\ccomp-1\proyecto final\intento1\include\computadora.h
+	"Producto.h"
+
+1496367781 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\src\audifonos.cpp
+	"Audifonos.h"
+
+1496241253 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1496241253 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\src\computadora.cpp
+	"Computadora.h"
+
+1496241253 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1496241253 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\src\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1496241253 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\src\software.cpp
+	"Software.h"
+
+1496241253 source:c:\users\israe\desktop\ccomp-1\proyecto final\intento1\src\tv.cpp
+	"TV.h"
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<stdlib.h>
+
+1496416172 c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\include\clientes.h
+	<iostream>
+
+1496416172 c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\include\producto.h
+	<iostream>
+
+1496416172 c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\include\audifonos.h
+	"Producto.h"
+
+1496416172 c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\include\impresoras.h
+	"Producto.h"
+
+1496416172 c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\include\software.h
+	"Producto.h"
+
+1496416172 c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\include\tv.h
+	"Producto.h"
+
+1496416172 c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\include\computadora.h
+	"Producto.h"
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\src\audifonos.cpp
+	"Audifonos.h"
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\src\computadora.cpp
+	"Computadora.h"
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\src\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\src\software.cpp
+	"Software.h"
+
+1496416172 source:c:\users\alumno-g\desktop\ccomp-1\proyecto final\intento1\src\tv.cpp
+	"TV.h"
+
+1496593971 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<stdlib.h>
+
+1496418962 c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\include\clientes.h
+	<iostream>
+
+1496593997 c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\include\producto.h
+	<iostream>
+
+1496594015 c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\include\audifonos.h
+	"Producto.h"
+
+1496593742 c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\include\impresoras.h
+	"Producto.h"
+
+1496593914 c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\include\software.h
+	"Producto.h"
+
+1496593838 c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\include\tv.h
+	"Producto.h"
+
+1496593567 c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\include\computadora.h
+	"Producto.h"
+
+1496593997 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\src\audifonos.cpp
+	"Audifonos.h"
+
+1496418962 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1496593854 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\src\computadora.cpp
+	"Computadora.h"
+
+1496593737 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1496593471 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\src\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1496593800 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\src\software.cpp
+	"Software.h"
+
+1496593841 source:c:\users\wair.esp\downloads\ccomp-1-master\proyecto final\intento1\src\tv.cpp
+	"TV.h"
+
+1496593997 source:c:\users\wair.esp\desktop\proyectocc\intento1\src\audifonos.cpp
+	"Audifonos.h"
+
+1496594015 c:\users\wair.esp\desktop\proyectocc\intento1\include\audifonos.h
+	"Producto.h"
+
+1496593997 c:\users\wair.esp\desktop\proyectocc\intento1\include\producto.h
+	<iostream>
+
+1496418962 source:c:\users\wair.esp\desktop\proyectocc\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1496418962 c:\users\wair.esp\desktop\proyectocc\intento1\include\clientes.h
+	<iostream>
+
+1496593854 source:c:\users\wair.esp\desktop\proyectocc\intento1\src\computadora.cpp
+	"Computadora.h"
+
+1496593567 c:\users\wair.esp\desktop\proyectocc\intento1\include\computadora.h
+	"Producto.h"
+
+1496593471 source:c:\users\wair.esp\desktop\proyectocc\intento1\src\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1496593800 source:c:\users\wair.esp\desktop\proyectocc\intento1\src\software.cpp
+	"Software.h"
+
+1496593914 c:\users\wair.esp\desktop\proyectocc\intento1\include\software.h
+	"Producto.h"
+
+1496593841 source:c:\users\wair.esp\desktop\proyectocc\intento1\src\tv.cpp
+	"TV.h"
+
+1496593838 c:\users\wair.esp\desktop\proyectocc\intento1\include\tv.h
+	"Producto.h"
+
+1496879927 source:c:\users\wair.esp\desktop\proyectocc\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<stdlib.h>
+
+1496871945 c:\users\wair.esp\desktop\proyectocc\intento1\include\impresoras.h
+	"Producto.h"
+
+1496872092 source:c:\users\wair.esp\desktop\proyectocc\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1496881341 source:c:\users\israe\desktop\proyectocc\intento1\src\audifonos.cpp
+	"Audifonos.h"
+
+1496881341 c:\users\israe\desktop\proyectocc\intento1\include\audifonos.h
+	"Producto.h"
+
+1496881341 c:\users\israe\desktop\proyectocc\intento1\include\producto.h
+	<iostream>
+
+1496881341 source:c:\users\israe\desktop\proyectocc\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1496881341 c:\users\israe\desktop\proyectocc\intento1\include\clientes.h
+	<iostream>
+
+1496881341 source:c:\users\israe\desktop\proyectocc\intento1\src\computadora.cpp
+	"Computadora.h"
+
+1496881341 c:\users\israe\desktop\proyectocc\intento1\include\computadora.h
+	"Producto.h"
+
+1496881341 source:c:\users\israe\desktop\proyectocc\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1496881341 c:\users\israe\desktop\proyectocc\intento1\include\impresoras.h
+	"Producto.h"
+
+1496881341 source:c:\users\israe\desktop\proyectocc\intento1\src\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1496881341 source:c:\users\israe\desktop\proyectocc\intento1\src\software.cpp
+	"Software.h"
+
+1496881341 c:\users\israe\desktop\proyectocc\intento1\include\software.h
+	"Producto.h"
+
+1496883547 source:c:\users\israe\desktop\proyectocc\intento1\src\tv.cpp
+	"TV.h"
+
+1496883840 c:\users\israe\desktop\proyectocc\intento1\include\tv.h
+	"Producto.h"
+
+1496884278 source:c:\users\israe\desktop\proyectocc\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<stdlib.h>
+
