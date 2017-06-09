@@ -12,6 +12,12 @@ public:
     Audifonos();
     void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad,string miConexion,string miTier1,string miTier2);//,string miTier3,string miCaracteristica);
     void getData();
+    string getCategoria();
+    string getNombre();
+    string getCodigo();
+    float getPrecio();
+    int getCantidad();
+
 };
 
 

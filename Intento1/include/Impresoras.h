@@ -9,6 +9,12 @@ class Impresoras : public Producto
     public:
         Impresoras();
         void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miTipo, string miCaracteristica, string miTamanho);
+        void getData();
+        string getCategoria();
+        string getNombre();
+        string getCodigo();
+        float getPrecio();
+        int getCantidad();
 
 };
 

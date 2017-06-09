@@ -10,6 +10,13 @@ class Software : public Producto
     public:
         Software();
         void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miTier1, string miTier2);
+        void getData();
+        string getCategoria();
+        string getNombre();
+        string getCodigo();
+        float getPrecio();
+        int getCantidad();
+
 };
 
 #endif // SOFTWARE_H

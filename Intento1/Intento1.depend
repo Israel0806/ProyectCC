@@ -384,3 +384,61 @@
 	"Computadora.h"
 	<stdlib.h>
 
+1496970064 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<stdlib.h>
+
+1496881341 c:\users\israe\desktop\proyectcc\intento1\include\clientes.h
+	<iostream>
+
+1496967432 c:\users\israe\desktop\proyectcc\intento1\include\producto.h
+	<iostream>
+
+1496967432 c:\users\israe\desktop\proyectcc\intento1\include\audifonos.h
+	"Producto.h"
+
+1496967432 c:\users\israe\desktop\proyectcc\intento1\include\impresoras.h
+	"Producto.h"
+
+1496969599 c:\users\israe\desktop\proyectcc\intento1\include\software.h
+	"Producto.h"
+
+1496967432 c:\users\israe\desktop\proyectcc\intento1\include\tv.h
+	"Producto.h"
+
+1496967432 c:\users\israe\desktop\proyectcc\intento1\include\computadora.h
+	"Producto.h"
+
+1496966979 source:c:\users\israe\desktop\proyectcc\intento1\src\audifonos.cpp
+	"Audifonos.h"
+
+1496881341 source:c:\users\israe\desktop\proyectcc\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1496966979 source:c:\users\israe\desktop\proyectcc\intento1\src\computadora.cpp
+	"Computadora.h"
+
+1496966979 source:c:\users\israe\desktop\proyectcc\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1496969554 source:c:\users\israe\desktop\proyectcc\intento1\src\producto.cpp
+	"Producto.h"
+	<iostream>
+
+1496969599 source:c:\users\israe\desktop\proyectcc\intento1\src\software.cpp
+	"Software.h"
+
+1496966979 source:c:\users\israe\desktop\proyectcc\intento1\src\tv.cpp
+	"TV.h"
+

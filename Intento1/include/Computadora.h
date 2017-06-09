@@ -9,6 +9,13 @@ class Computadora : public Producto
     public:
         Computadora();
         void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad,string miTipo);
+        void getData();
+        string getCategoria();
+        string getNombre();
+        string getCodigo();
+        float getPrecio();
+        int getCantidad();
+
 };
 
 #endif // COMPUTADORA_H

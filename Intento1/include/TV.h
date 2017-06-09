@@ -11,7 +11,12 @@ class TV : public Producto
     public:
         TV();
         void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miCalidad, string miCaracteristicas,string mipantallaTy, float miTam);
-//        getTv(char miCodigo[]);
+        void getData();
+        string getCategoria();
+        string getNombre();
+        string getCodigo();
+        float getPrecio();
+        int getCantidad();
 
 
 

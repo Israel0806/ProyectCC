@@ -23,12 +23,40 @@ void Audifonos::setData(string miNombre, float miPrecio, string miCategoria, str
 
 void Audifonos::getData()
 {
-    cout<<"Codigo: "<<codigo<<endl
-        <<"Nombre: "<<nombre<<endl
-        <<"Categoria: "<<categoria<<endl
-        <<"Precio: "<<precio<<endl
-        <<"Cantidad: "<<cantidad<<endl
-        <<"Conexion: "<<conexion<<endl
-        <<"Tier1: "<<tier1<<endl
-        <<"Tier2: "<<tier2<<endl;
+    cout                           <<endl
+        <<"Codigo: "<<codigo       <<endl
+        <<"Nombre: "<<nombre       <<endl
+        <<"Categoria: "<<categoria <<endl
+        <<"Precio: "<<precio       <<endl
+        <<"Cantidad: "<<cantidad   <<endl
+        <<"Conexion: "<<conexion   <<endl
+        <<"Tier1: "<<tier1         <<endl
+        <<"Tier2: "<<tier2         <<endl
+                                   <<endl;
+}
+
+
+string Audifonos::getCategoria()
+{
+    return categoria;
+}
+
+string Audifonos::getNombre()
+{
+    return nombre;
+}
+
+string Audifonos::getCodigo()
+{
+    return codigo;
+}
+
+float Audifonos::getPrecio()
+{
+    return precio;
+}
+
+int Audifonos::getCantidad()
+{
+    return cantidad;
 }
