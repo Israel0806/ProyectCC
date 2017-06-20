@@ -559,37 +559,7 @@ int main()
                         {
                             cout<<"1. Por Precio: "<<endl;
                             cout<<"2. Por Orden Alfabetico: "<<endl;
-                            cin>>lvoid ordenPrecio(string categoria,vector<Producto *> productos)
-{
-    vector<int> pos;
-    int i=0,x=0;
-    for(;i<int(productos.size());i++)
-    {
-        if(productos[i]->getCategoria()==categoria)
-        {
-            pos.push_back(i);
-        }
-    }
-    vector <int>temp=pos;
-    for(i=0;i<int(pos.size());i++)
-    {
-        for(int j=0;j<int(pos.size());j++)
-        {
-            //if(strcmp(producto2[i],producto2[j])<0)
-            if(productos[i]->getPrecio()>productos[j]->getPrecio())
-            {
-                int p1;
-                p1=temp[i];
-                temp[i]=temp[j];
-                temp[j]=p1;
-            }
-        }
-    }
-    pos=temp;
-
-    i=0;
-    for(;i<int(pos.size());i++,x++)
-        productos[(pos[x])]->getData();o;
+                            cin>>lo;
                             comprobar2Op(lo);
                             switch(lo)
                             {
@@ -706,7 +676,6 @@ void ordenPrecio(string categoria,vector<Producto *> productos)
         }
     }
     pos=temp;
-
     i=0;
     for(;i<int(pos.size());i++,x++)
         productos[(pos[x])]->getData();
