@@ -12,9 +12,17 @@
 #include "Software.h"
 #include "TV.h"
 #include "Computadora.h"
+
+
+
+
+
+
 //A1023
 //I102
 using namespace std;
+
+
 
 
 /* de char a int
@@ -79,8 +87,6 @@ void comprobar5Op(int &x);
 void comprobar6Op(int &x);
 void comprobar8Op(int &x);
 
-
-
 int main()
 {
     //Declaracion de instancias
@@ -106,7 +112,8 @@ int main()
     }*/
 
     //Declaracion de variables
-    int p1=1,p2=2,p3=3,p4=4,p5=5;
+    int p1=0,p2=0,p3=0,p4=0,p5=0; //Contador de cada tipo de producto, codigo
+
     int op,c=0,p=0,cat,lo;
     int edad,cantidad;
     float precio;
@@ -143,7 +150,7 @@ int main()
                     case 1:
                         {
                             //char *au= new char [4];
-                            char au[4]; //codigo
+                           /* char au[4]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -194,6 +201,63 @@ int main()
                             p1++;
                             delete r;
                             break;
+                            */
+
+                            char au[2]; //codigo
+                            int *r=new int;
+
+                            string cod,nomb;
+                            au[0]='A';
+
+                            string tier1,tier2,conexion;
+
+                            cout<<"Ingrese el Nombre del Producto: ";
+                            cin>>nombre;
+                            nomb=nombre;
+
+                            cout<<"Ingresar precio: ";
+                            cin>>precio;
+
+                            cout<<"Ingrese Cantidad: ";
+                            cin>>cantidad;
+
+
+
+                            cout<<"\n1. Auricular pasivo"<<endl
+                                <<"2. Auricular activo"<<endl<<endl;
+                                cin>>*r;
+                            comprobar2Op(*r);
+
+                            (*r==1)? tier1="Auricular pasivo":tier1="Auricular activo";
+                            //au++;
+                            cout<<"1. Auriculares abiertos"<<endl
+                                <<"2. Auriculares cerrados"<<endl<<endl;
+                                cin>>*r;
+                            comprobar2Op(*r);
+
+                                (*r==1)? tier2="Auriculares abiertos":tier2="Auriculares cerrados";
+                            //au++;
+
+                            cout<<"1. Conexion wireless"<<endl
+                                <<"2. Conexion alambrica"<<endl<<endl;
+                                cin>>*r;
+                            comprobar2Op(*r);
+                                (*r==1)? conexion="Conexion wireless":conexion="Conexion alambrica";
+                            //au--;
+
+                            au[1]='0'+p1;
+
+                            cod=au;
+                            audifonos[p1].setData(nomb,precio,"Audifonos",cod,cantidad,conexion,tier1,tier2);
+                            productos.push_back(&audifonos[p1]);
+                            //productos[(int(productos.size()))]->getData();
+                            p1++;
+                            delete r;
+                            break;
+
+
+
+
                         }
                     case 2:
                         {
@@ -252,6 +316,8 @@ int main()
                                 componente="Perifericos";
                             }
 
+                            comp[1]='0'+p2;
+
                             //comp--;
                             cod=comp;
 
@@ -264,7 +330,7 @@ int main()
                         }
                     case 3:
                         {
-                            char imp[4]; //codigo
+                            char imp[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -288,10 +354,8 @@ int main()
                             cout<<"Ingrese Cantidad: ";
                             cin>>cantidad;
 
-
                             cout<<"Ingrese el tamanho de impresion\n";
                             cin>>tamanho;
-                            imp[1]='0';
 
                             cout<<"\n\nCaracteristica: "<<endl
                                 <<"1. Blanco y negro"   <<endl
@@ -300,7 +364,6 @@ int main()
                             cin>>*r;
                             comprobar2Op(*r);
 
-                            (*r==1)? imp[2]=0:imp[2]=1;
                             (*r==1)? caracteristica="Blanco y negro" :caracteristica="A color";
 
                             cout<<"\n1.Impresion laser\n"
@@ -308,11 +371,10 @@ int main()
                                 cin>>*r;
                             comprobar2Op(*r);
 
-                            (*r==1)? imp[3]='0':imp[3]='1';
                             (*r==1)? tipo="Impresion laser":tipo="Impresion por cartucho";
 
 
-
+                            imp[1]='0'+p3;
 
                             //comp--;
                             cod=imp;
@@ -331,7 +393,7 @@ int main()
                         {
                             //software
 
-                            char soft[3]; //codigo
+                            char soft[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -356,7 +418,6 @@ int main()
                             cin>>*r;
                             comprobar4Op(*r);
 
-                            (*r==1)? soft[1]='0' : (*r==2)? soft[1]='1' : (*r==3)? soft[1]='2' : soft[1]='3';
                             (*r==1)? tier1="Educacion" : (*r==2)? tier1="Diseño" : (*r==3)? tier1="Finanzas" : tier1="Seguridad";
 
                             switch(*r)
@@ -367,7 +428,6 @@ int main()
                                         <<"3. Ninhos"<<endl;
                                         cin>>*r;
                                         comprobar3Op(*r);
-                                        (*r==1)? soft[2]='0' : (*r==2)? soft[2]='1' : soft[2]='2';
                                         (*r==1)? tier2="Lenguaje" : (*r==2)? tier2="Tipeo" : tier2="Ninhos";
                                         break;
                                 case 2:
@@ -376,7 +436,6 @@ int main()
                                         <<"3. Ilustracion"<<endl;
                                         cin>>*r;
                                         comprobar3Op(*r);
-                                        (*r==1)? soft[2]='0' : (*r==2)? soft[2]='1' : soft[2]='2';
                                         (*r==1)? tier2="CAD" : (*r==2)? tier2="Photography" : tier2="Ilustracion";
                                         break;
                                 case 3:
@@ -385,7 +444,6 @@ int main()
                                         <<"3. Distribucion de sueldos"<<endl;
                                         cin>>*r;
                                         comprobar3Op(*r);
-                                        (*r==1)? soft[2]='0' : (*r==2)? soft[2]='1' : soft[2]='2';
                                         (*r==1)? tier2="Contabilidad de empresas" : (*r==2)? tier2="Contabilidad personal" : tier2="Distribucion de sueldos";
                                         break;
                                 case 4:
@@ -394,11 +452,15 @@ int main()
                                         <<"3. Parental control"<<endl;
                                         cin>>*r;
                                         comprobar3Op(*r);
-                                        (*r==1)? soft[2]='0' : (*r==2)? soft[2]='1' : soft[2]='2';
                                         (*r==1)? tier2="Antivirus" : (*r==2)? tier2="Antimalware" : tier2="Parental control";
                                         break;
 
                             }
+
+                            soft[1]='0'+p4;
+
+                            cod=soft;
+
                             software[p4].setData(nomb,precio,"software",cod,cantidad,tier1,tier2);
                             productos.push_back(&software[p4]);
                             //computadoras[p4].getData();
@@ -409,7 +471,7 @@ int main()
                         {
                             //television
 
-                            char tele[5]; //codigo
+                            char tele[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -435,7 +497,6 @@ int main()
                                 <<"3. Ultra HD 4K" <<endl;
                                 cin>>*r;
                             comprobar3Op(*r);
-                            (*r==1)? tele[1]='0' : (*r==2)? tele[1]='1' : tele[1]='2';
                             (*r==1)? calidad="HD" : (*r==2)? calidad="Ultra HD" : calidad="Ultra HD 4K";
 
                             cout<<"Caracteristicas" <<endl
@@ -443,7 +504,6 @@ int main()
                                 <<"2. Smart"        <<endl;
                                 cin>>*r;
                                 comprobar2Op(*r);
-                                (*r==1)? tele[2]='0' : tele[2]='1';
                                 (*r==1)? caracteristicas="Curvado" : caracteristicas="Smart" ;
 
                             cout<<"Tipo de pantalla"<<endl
@@ -452,13 +512,16 @@ int main()
                                 <<"3. OLED"         <<endl;
                                 cin>>*r;
                                 comprobar3Op(*r);
-                            (*r==1)? tele[3]='0' : (*r==2)? tele[3]='1' : tele[3]='2';
                             (*r==1)? pantallaTy="LED" : (*r==2)? pantallaTy="LCD"  : pantallaTy="OLED" ;
 
 
                             cout<<"Ingrese el tamanho en pulgadas"<<endl;
                             cin>>tam;
-                            tele[4]='0';
+
+                            tele[1]='0'+p5;
+
+                            cod=tele;
+
                             Tv[p5].setData(nomb,precio,"television",cod,cantidad,calidad,caracteristicas,pantallaTy,tam);
                             productos.push_back(&Tv[p5]);
                             //computadoras[p5].getData();
@@ -569,7 +632,6 @@ int main()
                             }
                             break;
                         }
-
                 }
 
 
@@ -581,8 +643,6 @@ int main()
                 //Busca un producto en especifico
                 cout<<"Ingrese el nombre: "<<endl;
                 cin>>lo;
-
-
 
                 break;
                 }
@@ -676,6 +736,7 @@ void ordenPrecio(string categoria,vector<Producto *> productos)
         }
     }
     pos=temp;
+
     i=0;
     for(;i<int(pos.size());i++,x++)
         productos[(pos[x])]->getData();
