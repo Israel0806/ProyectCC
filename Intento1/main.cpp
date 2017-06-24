@@ -3,7 +3,8 @@
 #include <vector>
 #include <string.h>
 
-//#include <algorithm>
+#include <algorithm>
+#include <iterator>
 
 #include "Clientes.h"
 #include "Producto.h"
@@ -640,14 +641,71 @@ int main()
             case 4:
                 {
                 string lo;
+                vector <string> nombres;
                 //Busca un producto en especifico
                 cout<<"Ingrese el nombre: "<<endl;
                 cin>>lo;
+                for(unsigned i=0;i<productos.size();i++)
+                {
+                    nombres.push_back(productos[i]->getNombre());
+                }
 
+<<<<<<< HEAD
+                vector<string>:: iterator it = find(nombres.begin(),nombres.end(),lo);
+                if(it!=nombres.end())
+                {
+                    for(unsigned i=0;i<productos.size();i++)
+                    {
+                        if(productos[i]->getNombre()==*it)
+                            productos[i]->getData();
+                    }
+                }
+                else
+                {
+                    cout<<"Producto no encontrado"<<endl<<endl;
+
+
+
+                }
+
+                cout<<"Ingrese el Codigo: "<<endl;
+                cin>>lo;
+
+                vector<string>codigos;
+
+                for(unsigned i=0;i<productos.size();i++)
+                {
+                  codigos.push_back(productos[i]->getCodigo());
+                }
+                vector<string>:: iterator pitochu = find(codigos.begin(),codigos.end(),lo);
+                if(pitochu!=codigos.end())
+                {
+                    for(unsigned i=0;i<productos.size();i++)
+                    {
+                        if(productos[i]->getCodigo()==*pitochu)
+                            productos[i]->getData();
+                    }
+                }
+                else
+                {
+                    cout<<"Producto no encontrado"<<endl;
+                }
+=======
+>>>>>>> 0bd6ce0d35d95729731f8b48b025805029e32341
                 break;
                 }
+
+
+
+
             case 5:
+
                 //Realiza la venta de un producto
+
+
+
+
+
                 break;
             case 6:
                 //Termina el programa

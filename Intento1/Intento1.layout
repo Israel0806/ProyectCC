@@ -2,9 +2,15 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
+	<File name="src\Clientes.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="706" topLine="5" />
+=======
 	<File name="src\Producto.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="448" topLine="1" />
+>>>>>>> 0bd6ce0d35d95729731f8b48b025805029e32341
 		</Cursor>
 	</File>
 	<File name="include\Producto.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,6 +23,21 @@
 			<Cursor1 position="53" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
+	<File name="src\Producto.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="448" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="src\Impresoras.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1213" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="24581" topLine="659" />
+=======
 	<File name="include\Audifonos.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="606" topLine="0" />
@@ -30,8 +51,28 @@
 	<File name="src\Impresoras.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1213" topLine="26" />
+>>>>>>> 0bd6ce0d35d95729731f8b48b025805029e32341
+		</Cursor>
+		<Folding>
+			<Collapse line="654" />
+			<Collapse line="662" />
+		</Folding>
+	</File>
+<<<<<<< HEAD
+	<File name="include\Audifonos.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="606" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="src\Audifonos.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="982" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="include\Software.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="400" topLine="0" />
+=======
 	<File name="include\TV.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="198" topLine="0" />
@@ -45,10 +86,39 @@
 	<File name="src\TV.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1222" topLine="25" />
+>>>>>>> 0bd6ce0d35d95729731f8b48b025805029e32341
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="include\Impresoras.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="134" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Computadora.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="917" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="include\Clientes.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="169" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TV.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1222" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="include\Computadora.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="478" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TV.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="198" topLine="0" />
+=======
 			<Cursor1 position="297" topLine="242" />
 		</Cursor>
 	</File>
@@ -75,6 +145,7 @@
 	<File name="include\Impresoras.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="134" topLine="0" />
+>>>>>>> 0bd6ce0d35d95729731f8b48b025805029e32341
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
