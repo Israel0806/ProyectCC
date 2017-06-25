@@ -1,7 +1,7 @@
 #ifndef SOFTWARE_H
 #define SOFTWARE_H
 #include "Producto.h"
-
+#include <fstream>
 class Software : public Producto
 {
 

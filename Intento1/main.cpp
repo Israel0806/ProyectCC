@@ -15,8 +15,7 @@
 #include "Computadora.h"
 
 
-
-
+#include <fstream>
 
 
 //A1023
@@ -69,11 +68,6 @@ vector <Producto *> productos;
 
 
 */
-
-
-
-
-
 
 void printMenu();
 void printCategorias();
@@ -292,28 +286,28 @@ int main()
                             switch(*r)
                             {
                             case 1:
-                                comp[1]=0;
+
                                 componente="Fuente";
                             case 2:
-                                comp[1]=1;
+
                                 componente="CPU";
                             case 3:
-                                comp[1]=2;
+
                                 componente="Memoria RAM";
                             case 4:
-                                comp[1]=3;
+
                                 componente="HDD";
                             case 5:
-                                comp[1]=4;
+
                                 componente="GPU";
                             case 6:
-                                comp[1]=5;
+
                                 componente="MotherBoard";
                             case 7:
-                                comp[1]=6;
+
                                 componente="Case";
                             case 8:
-                                comp[1]=7;
+
                                 componente="Perifericos";
                             }
 
@@ -650,7 +644,7 @@ int main()
                     nombres.push_back(productos[i]->getNombre());
                 }
 
-<<<<<<< HEAD
+
                 vector<string>:: iterator it = find(nombres.begin(),nombres.end(),lo);
                 if(it!=nombres.end())
                 {
@@ -690,8 +684,7 @@ int main()
                 {
                     cout<<"Producto no encontrado"<<endl;
                 }
-=======
->>>>>>> 0bd6ce0d35d95729731f8b48b025805029e32341
+
                 break;
                 }
 

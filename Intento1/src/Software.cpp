@@ -7,12 +7,27 @@ Software::Software()
 
 void Software::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miTier1, string miTier2)
 {
-    nombre=miNombre;
-    precio=miPrecio;
-    categoria=miCategoria;
-    codigo=miCodigo;
-    Tier1=miTier1;
-    Tier2=miTier2;
+    fstream readIn;
+    readIn.open("Software.txt", ios::app | ios::in );
+
+    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTier1 << ' ' << miTier2 <<endl;
+    //readIn.close(); fstream codigos; codigos.open("Codigos.txt",ios::
+    ifstream readOut;
+    string line;
+    readOut.open("Software.txt", ios::out );
+    if (readOut.is_open())
+      {
+
+        while ( getline (readOut,line) )
+        {
+          cout << line << '\n';
+        }
+      }
+    else
+    {
+        cout<<"No se pudo ingresar a la base de datos\n";
+    }
+    readOut.close();
 }
 
 void Software::getData()

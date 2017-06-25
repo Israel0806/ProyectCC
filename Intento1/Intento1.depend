@@ -384,11 +384,26 @@
 	"Computadora.h"
 	<stdlib.h>
 
-<<<<<<< HEAD
-1498266525 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
-=======
-1497819083 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
->>>>>>> 0bd6ce0d35d95729731f8b48b025805029e32341
+1496884278 D
+
+1498417644 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	<algorithm>
+	<iterator>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<fstream>
+	<stdlib.h>
+
+1497819083 6ce0d35d95729731f8b48b025805029e32341
 	<iostream>
 	<stdlib.h>
 	<vector>
@@ -413,38 +428,43 @@
 1497894994 c:\users\israe\desktop\proyectcc\intento1\include\audifonos.h
 	"Producto.h"
 
-1497548132 c:\users\israe\desktop\proyectcc\intento1\include\impresoras.h
+1498416055 c:\users\israe\desktop\proyectcc\intento1\include\impresoras.h
 	"Producto.h"
+	<fstream>
 
-1497548132 c:\users\israe\desktop\proyectcc\intento1\include\software.h
+1498417242 c:\users\israe\desktop\proyectcc\intento1\include\software.h
 	"Producto.h"
+	<fstream>
 
-1497548132 c:\users\israe\desktop\proyectcc\intento1\include\tv.h
+1498417028 c:\users\israe\desktop\proyectcc\intento1\include\tv.h
 	"Producto.h"
+	<fstream>
 
-1497548132 c:\users\israe\desktop\proyectcc\intento1\include\computadora.h
+1498415890 c:\users\israe\desktop\proyectcc\intento1\include\computadora.h
 	"Producto.h"
+	"fstream"
 
-1497895030 source:c:\users\israe\desktop\proyectcc\intento1\src\audifonos.cpp
+1498417028 source:c:\users\israe\desktop\proyectcc\intento1\src\audifonos.cpp
 	"Audifonos.h"
+	<fstream>
 
 1497548132 source:c:\users\israe\desktop\proyectcc\intento1\src\clientes.cpp
 	"Clientes.h"
 	<iostream>
 
-1497548132 source:c:\users\israe\desktop\proyectcc\intento1\src\computadora.cpp
+1498417028 source:c:\users\israe\desktop\proyectcc\intento1\src\computadora.cpp
 	"Computadora.h"
 
-1497548132 source:c:\users\israe\desktop\proyectcc\intento1\src\impresoras.cpp
+1498417028 source:c:\users\israe\desktop\proyectcc\intento1\src\impresoras.cpp
 	"Impresoras.h"
 
 1497548132 source:c:\users\israe\desktop\proyectcc\intento1\src\producto.cpp
 	"Producto.h"
 	<iostream>
 
-1497548132 source:c:\users\israe\desktop\proyectcc\intento1\src\software.cpp
+1498417028 source:c:\users\israe\desktop\proyectcc\intento1\src\software.cpp
 	"Software.h"
 
-1497548132 source:c:\users\israe\desktop\proyectcc\intento1\src\tv.cpp
+1498417227 source:c:\users\israe\desktop\proyectcc\intento1\src\tv.cpp
 	"TV.h"
 

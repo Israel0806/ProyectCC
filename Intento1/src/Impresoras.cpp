@@ -8,15 +8,26 @@ Impresoras::Impresoras()
 
 void Impresoras::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miTipo, string miCaracteristica,string miTamanho)
 {
-    nombre=miNombre;
-    precio=miPrecio;
-    categoria=miCategoria;
-    codigo=miCodigo;
-    cantidad=miCantidad;
-    tipo=miTipo;
-    caracteristicas=miCaracteristica;
-    tamanho=miTamanho;
+    fstream readIn;
+    readIn.open("Impresoras.txt", ios::app | ios::in );
+    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTipo << ' ' << miCaracteristica << ' ' << miTamanho <<endl;
+    readIn.close();
+    ifstream readOut;
+    string line;
+    readOut.open("Impresoras.txt", ios::out );
+    if (readOut.is_open())
+      {
 
+        while ( getline (readOut,line) )
+        {
+          cout << line << '\n';
+        }
+      }
+    else
+    {
+        cout<<"No se pudo ingresar a la base de datos\n";
+    }
+    readOut.close();
 }
 
 void Impresoras::getData()

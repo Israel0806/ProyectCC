@@ -7,14 +7,26 @@ TV::TV()
 
 void TV::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miCalidad, string miCaracteristicas,string mipantallaTy, float miTam)
 {
-    nombre=miNombre;
-    precio=miPrecio;
-    categoria=miCategoria;
-    codigo=miCodigo;
-    calidad=miCalidad;
-    pantallaTy=mipantallaTy;
-    tam=miTam;
-    caracteristicas=miCaracteristicas;
+fstream readIn;
+    readIn.open("Computadora.txt", ios::app | ios::in );
+    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miCalidad << ' ' << miCaracteristicas << ' ' << mipantallaTy << ' ' << miTam <<endl;
+    readIn.close();
+    ifstream readOut;
+    string line;
+    readOut.open("Computadora.txt", ios::out );
+    if (readOut.is_open())
+      {
+
+        while ( getline (readOut,line) )
+        {
+          cout << line << '\n';
+        }
+      }
+    else
+    {
+        cout<<"No se pudo ingresar a la base de datos\n";
+    }
+    readOut.close();
 }
 
 void TV::getData()

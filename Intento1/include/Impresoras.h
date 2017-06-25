@@ -1,7 +1,7 @@
 #ifndef IMPRESORAS_H
 #define IMPRESORAS_H
 #include "Producto.h"
-
+#include <fstream>
 class Impresoras : public Producto
 {
     private:

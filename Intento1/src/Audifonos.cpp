@@ -1,5 +1,5 @@
 #include "Audifonos.h"
-
+#include <fstream>
 Audifonos::Audifonos()
 {
 
@@ -9,14 +9,27 @@ Audifonos::Audifonos()
 
 void Audifonos::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad,string miConexion,string miTier1,string miTier2)//,string miTier3,string miCaracteristica)
 {
-    nombre=miNombre;
-    precio=miPrecio;
-    categoria=miCategoria;
-    cantidad=miCantidad;
-    codigo=miCodigo;
-    conexion=miConexion;
-    tier1=miTier1;
-    tier2=miTier2;
+    fstream readIn;
+    readIn.open("Audifonos.txt", ios::app | ios::in );
+    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miConexion << ' ' << miTier1 << ' ' << miTier2 << ' '<<endl;
+    readIn.close();
+    ifstream readOut;
+    string line;
+    readOut.open("Audifonos.txt", ios::out );
+
+    if (readOut.is_open())
+      {
+
+        while ( getline (readOut,line) )
+        {
+          cout << line << '\n';
+        }
+      }
+    else
+    {
+        cout<<"No se pudo ingresar a la base de datos\n";
+    }
+    readOut.close();
     //tier3=miTier3;
     //caracteristica=miCaracteristica;
 }

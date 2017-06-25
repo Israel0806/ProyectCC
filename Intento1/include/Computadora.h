@@ -1,7 +1,7 @@
 #ifndef COMPUTADORA_H
 #define COMPUTADORA_H
 #include "Producto.h"
-
+#include "fstream"
 class Computadora : public Producto
 {
     private:
