@@ -8,8 +8,16 @@ void Computadora::setData(string miNombre, float miPrecio, string miCategoria, s
 {
     fstream readIn;
     readIn.open("Computadora.txt", ios::app | ios::in );
-    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTipo <<endl;
-    readIn.close();
+    if(readIn.is_open() )
+    {
+        readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTipo <<endl;
+        cout<<"Se ingresaron los datos correctamente\n";
+        readIn.close();
+    }
+    else
+    {
+        cout<<"Error al ingresar a la base de datos\n";
+    }
     ifstream readOut;
     string line;
     readOut.open("Computadora.txt", ios::out );

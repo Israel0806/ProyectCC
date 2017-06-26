@@ -8,12 +8,12 @@ TV::TV()
 void TV::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miCalidad, string miCaracteristicas,string mipantallaTy, float miTam)
 {
 fstream readIn;
-    readIn.open("Computadora.txt", ios::app | ios::in );
+    readIn.open("TV.txt", ios::app | ios::in );
     readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miCalidad << ' ' << miCaracteristicas << ' ' << mipantallaTy << ' ' << miTam <<endl;
     readIn.close();
     ifstream readOut;
     string line;
-    readOut.open("Computadora.txt", ios::out );
+    readOut.open("TV.txt", ios::out );
     if (readOut.is_open())
       {
 

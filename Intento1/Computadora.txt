@@ -1,2 +1,10 @@
 C0 EVGA-650GI Computadoras 74.99 10 
 C1 Intel-7thGen-i7-7700K Computadoras 350.00 7 
+C2 AsusDesigno-MHZ279-"27" Computadoras 227.98 2 
+C3 CorsairVengeance-LPX8GB Computadoras 61.99 5 
+C4 Asus-GeForceGTX1070-8GB Computadoras 699.99 3 
+C5 WDBlue-1TB-DDR4-SATA-6GB/s Computadoras 54 5 
+C6 ASUSPRIME-Z270 Computadoras 160 4 
+C7 NZXT-Manta-W/B Computadoras 139.99 8 
+C8 Logitech-MxMaster Computadoras 63.95 4 
+C9 Vortex-POK3R-MBLUECHERRYMX Computadoras 120 6 

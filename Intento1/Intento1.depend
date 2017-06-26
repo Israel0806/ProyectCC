@@ -386,7 +386,7 @@
 
 1496884278 D
 
-1498417644 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
+1498450352 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<vector>
@@ -452,7 +452,7 @@
 	"Clientes.h"
 	<iostream>
 
-1498417028 source:c:\users\israe\desktop\proyectcc\intento1\src\computadora.cpp
+1498436313 source:c:\users\israe\desktop\proyectcc\intento1\src\computadora.cpp
 	"Computadora.h"
 
 1498417028 source:c:\users\israe\desktop\proyectcc\intento1\src\impresoras.cpp
@@ -462,9 +462,9 @@
 	"Producto.h"
 	<iostream>
 
-1498417028 source:c:\users\israe\desktop\proyectcc\intento1\src\software.cpp
+1498421478 source:c:\users\israe\desktop\proyectcc\intento1\src\software.cpp
 	"Software.h"
 
-1498417227 source:c:\users\israe\desktop\proyectcc\intento1\src\tv.cpp
+1498433825 source:c:\users\israe\desktop\proyectcc\intento1\src\tv.cpp
 	"TV.h"
 

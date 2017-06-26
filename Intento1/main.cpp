@@ -107,13 +107,13 @@ int main()
     }*/
 
     //Declaracion de variables
-    int p1=0,p2=0,p3=0,p4=0,p5=0; //Contador de cada tipo de producto, codigo
+    int p1,p2,p3,p4,p5; //Contador de cada tipo de producto, codigo
 
     int op,c=0,p=0,cat,lo;
     int edad,cantidad;
     float precio;
     string direccion,tipo,categoria;
-    char nombre[20],sexo;
+    char nombre[30],sexo;
     do
     {
         printMenu(); cin>>op;
@@ -144,61 +144,8 @@ int main()
                 {
                     case 1:
                         {
-                            //char *au= new char [4];
-                           /* char au[4]; //codigo
-                            int *r=new int;
 
-                            string cod,nomb;
-                            au[0]='A';
-
-                            string tier1,tier2,conexion;
-
-                            cout<<"Ingrese el Nombre del Producto: ";
-                            cin>>nombre;
-                            nomb=nombre;
-
-                            cout<<"Ingresar precio: ";
-                            cin>>precio;
-
-                            cout<<"Ingrese Cantidad: ";
-                            cin>>cantidad;
-
-
-
-                            cout<<"\n1. Auricular pasivo"<<endl
-                                <<"2. Auricular activo"<<endl<<endl;
-                                cin>>*r;
-                            comprobar2Op(*r);
-
-                            (*r==1)? au[1]='0':au[1]='1';
-                            (*r==1)? tier1="Auricular pasivo":tier1="Auricular activo";
-                            //au++;
-                            cout<<"1. Auriculares abiertos"<<endl
-                                <<"2. Auriculares cerrados"<<endl<<endl;
-                                cin>>*r;
-                            comprobar2Op(*r);
-
-                                (*r==1)? au[2]='0':au[2]='1'; //if statement
-                                (*r==1)? tier2="Auriculares abiertos":tier2="Auriculares cerrados";
-                            //au++;
-
-                            cout<<"1. Conexion wireless"<<endl
-                                <<"2. Conexion alambrica"<<endl<<endl;
-                                cin>>*r;
-                            comprobar2Op(*r);
-                                (*r==1)? au[3]='0':au[3]='1';
-                                (*r==1)? conexion="Conexion wireless":conexion="Conexion alambrica";
-                            //au--;
-                            cod=au;
-                            audifonos[p1].setData(nomb,precio,"Audifonos",cod,cantidad,conexion,tier1,tier2);
-                            productos.push_back(&audifonos[p1]);
-                            //productos[(int(productos.size()))]->getData();
-                            p1++;
-                            delete r;
-                            break;
-                            */
-
-                            char au[2]; //codigo
+                            char *au=new char[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -239,26 +186,62 @@ int main()
                             comprobar2Op(*r);
                                 (*r==1)? conexion="Conexion wireless":conexion="Conexion alambrica";
                             //au--;
+
+
+
+                            ifstream readOut;
+                            readOut.open("codigos.txt", ios::out );
+
+                            ofstream Modify;
+                            Modify.open("codigos.txt", ios::in);
+
+                            if (readOut.is_open())
+                              {
+                                int a=0;
+                                string line;
+                                while ( getline (readOut,line) )
+                                {
+                                    a+=line.size()+1;
+                                    if(line=="codigo1")
+                                    {
+                                        getline(readOut,line);
+                                        a+=line.size();
+                                        p1=atoi(line.c_str());
+                                        p1++;
+                                        cout << p1 << '\n';
+                                        Modify.seekp(a);
+                                        Modify <<p1;
+                                        Modify.close();
+                                        break;
+                                    }
+                                }
+                              }
+                            else
+                            {
+                                cout<<"error\n";
+                            }
+                            readOut.close();
+
 
                             au[1]='0'+p1;
 
                             cod=au;
+
+                            cout<<"\n\n\ncodigo: "<<cod<<endl<<endl;
+
+
                             audifonos[p1].setData(nomb,precio,"Audifonos",cod,cantidad,conexion,tier1,tier2);
                             productos.push_back(&audifonos[p1]);
                             //productos[(int(productos.size()))]->getData();
-                            p1++;
                             delete r;
+                            delete [] au;
                             break;
-
-
-
-
                         }
                     case 2:
                         {
                          //Computadoras
                             //char *au= new char [4];
-                            char comp[2]; //codigo
+                            char *comp= new char[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -311,21 +294,61 @@ int main()
                                 componente="Perifericos";
                             }
 
+                            ifstream readOut;
+                            readOut.open("codigos.txt", ios::out );
+
+                            ofstream Modify;
+                            Modify.open("codigos.txt", ios::in);
+
+                            if (readOut.is_open() and Modify.is_open())
+                              {
+                                int a=0;
+                                string line;
+                                while ( getline (readOut,line) )
+                                {
+                                    a+=line.size()+1;
+                                    if(line=="codigo2")
+                                    {
+                                        getline(readOut,line);
+                                        a+=line.size();
+                                        p2=atoi(line.c_str());
+                                        p2++;
+                                        cout << p2 << '\n';
+                                        Modify.seekp(a+2);
+                                        Modify <<p2;
+                                        Modify.close();
+                                        break;
+                                    }
+                                }
+                                readOut.close();
+                              }
+                            else
+                            {
+                                cout<<"error\n";
+                            }
+
+
                             comp[1]='0'+p2;
+
+                            for(int i=0; i<2;i++)
+                            {
+                                cout<<"comp: "<<comp[i]<<endl;
+                            }
 
                             //comp--;
                             cod=comp;
+                            cout<<"\n\n\ncodigo: "<<cod<<endl<<endl;
 
                             computadoras[p2].setData(nomb,precio,"Computadoras",cod,cantidad,tipo);
-                            productos.push_back(&computadoras[p2]);
+                            //productos.push_back(&computadoras[p2]);
                            // computadoras[p].getData();
-                            p2++;
                             delete r;
+                            delete [] comp;
                             break;
                         }
                     case 3:
                         {
-                            char imp[2]; //codigo
+                            char *imp=new char[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -368,6 +391,38 @@ int main()
 
                             (*r==1)? tipo="Impresion laser":tipo="Impresion por cartucho";
 
+                            ifstream readOut;
+                            readOut.open("codigos.txt", ios::out );
+
+                            ofstream Modify;
+                            Modify.open("codigos.txt", ios::in);
+
+                            if (readOut.is_open() and Modify.is_open())
+                              {
+                                int a=0;
+                                string line;
+                                while ( getline (readOut,line) )
+                                {
+                                    a+=line.size()+1;
+                                    if(line=="codigo3")
+                                    {
+                                        getline(readOut,line);
+                                        a+=line.size()+1;
+                                        p3=atoi(line.c_str());
+                                        p3++;
+                                        cout << p3 << '\n';
+                                        Modify.seekp(a+2);
+                                        Modify <<p3;
+                                        Modify.close();
+                                        break;
+                                    }
+                                }
+                                readOut.close();
+                              }
+                            else
+                            {
+                                cout<<"error\n";
+                            }
 
                             imp[1]='0'+p3;
 
@@ -380,15 +435,15 @@ int main()
                             impresoras[p3].setData(nomb, precio, "Impresoras", cod, cantidad, tipo, caracteristica, tamanho);
                             productos.push_back(&impresoras[p3]);
                             //computadoras[p3].getData();
-                            p3++;
                             delete r;
+                            delete[] imp;
                             break;
                         }
                     case 4:
                         {
                             //software
 
-                            char soft[2]; //codigo
+                            char *soft=new char[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -452,6 +507,40 @@ int main()
 
                             }
 
+                            ifstream readOut;
+                            readOut.open("codigos.txt", ios::out );
+
+                            ofstream Modify;
+                            Modify.open("codigos.txt", ios::in);
+
+                            if (readOut.is_open())
+                              {
+                                int a=0;
+                                string line;
+                                while ( getline (readOut,line) )
+                                {
+                                    a+=line.size()+1;
+                                    if(line=="codigo4")
+                                    {
+                                        getline(readOut,line);
+                                        a+=line.size();
+                                        p4=atoi(line.c_str());
+                                        p4++;
+                                        cout << p4 << '\n';
+                                        Modify.seekp(a+6);
+                                        Modify <<p4;
+                                        Modify.close();
+                                        break;
+                                    }
+                                }
+                            readOut.close();
+                              }
+                            else
+                            {
+                                cout<<"error\n";
+                            }
+
+
                             soft[1]='0'+p4;
 
                             cod=soft;
@@ -459,14 +548,15 @@ int main()
                             software[p4].setData(nomb,precio,"software",cod,cantidad,tier1,tier2);
                             productos.push_back(&software[p4]);
                             //computadoras[p4].getData();
-                            p4++;
+                            delete r;
+                            delete[] soft;
                             break;
                         }
                     case 5:
                         {
                             //television
 
-                            char tele[2]; //codigo
+                            char *tele=new char[2]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -513,6 +603,40 @@ int main()
                             cout<<"Ingrese el tamanho en pulgadas"<<endl;
                             cin>>tam;
 
+
+                            ifstream readOut;
+                            readOut.open("codigos.txt", ios::out );
+
+                            ofstream Modify;
+                            Modify.open("codigos.txt", ios::in);
+
+                            if (readOut.is_open())
+                              {
+                                int a=0;
+                                string line;
+                                while ( getline (readOut,line) )
+                                {
+                                    a+=line.size()+1;
+                                    if(line=="codigo5")
+                                    {
+                                        getline(readOut,line);
+                                        a+=line.size()+1;
+                                        p5=atoi(line.c_str());
+                                        p5++;
+                                        cout << p5 << '\n';
+                                        Modify.seekp(a+7);
+                                        Modify <<p5;
+                                        Modify.close();
+                                        break;
+                                    }
+                                }
+                              }
+                            else
+                            {
+                                cout<<"error\n";
+                            }
+                            readOut.close();
+
                             tele[1]='0'+p5;
 
                             cod=tele;
@@ -520,7 +644,8 @@ int main()
                             Tv[p5].setData(nomb,precio,"television",cod,cantidad,calidad,caracteristicas,pantallaTy,tam);
                             productos.push_back(&Tv[p5]);
                             //computadoras[p5].getData();
-                            p5++;
+                            delete r;
+                            delete[] tele;
                             break;
                         }
                 }

@@ -1,0 +1,11 @@
+S0 Easy_English_Platinum_11 software 21.99 1 Educacion Lenguaje
+S1 MavisBeacon_Teaches_Typing_Powered software 19.99 3 Educacion Tipeo
+S2 LeapFrog_cooking_Recipes_on_the_Road software 5.8 2 Educacion Ninhos
+S3 DesignCad-3DMax software 99.99 5 Diseño CAD
+S4 Corel_Painter_Essential software 20 3 Diseño Photography
+S5 CorelDRAW_Home&Student software 72 9 Diseño Ilustracion
+S6 QuickBooks_DesktopPro2017 software 299.99 10 Finanzas Contabilidad de empresas
+S7 Quicken_Deluxe2017 software 67.94 5 Finanzas Contabilidad personal
+S8 QuickBooks_Small_Business_Accounting software 299.99 5 Finanzas Distribucion de sueldos
+S9 Kaspersky_Internet_Security software 79.95 3 Seguridad Antivirus
+S: Hitman_Pro software 24.95 4 Seguridad Antimalware
