@@ -9,17 +9,23 @@ Audifonos::Audifonos()
 
 void Audifonos::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad,string miConexion,string miTier1,string miTier2)//,string miTier3,string miCaracteristica)
 {
-    fstream readIn;
-    readIn.open("Audifonos.txt", ios::app | ios::in );
-    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miConexion << ' ' << miTier1 << ' ' << miTier2 << ' '<<endl;
-    readIn.close();
-    ifstream readOut;
     string line;
+    ofstream readIn;
+    readIn.open("Audifonos.txt", ios::app | ios::in );
+    if( readIn.is_open() )
+    {
+        readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miConexion << ' ' << miTier1 << ' ' << miTier2 << ' '<<endl;
+        readIn.close();
+    }
+    else
+    {
+        cout<<"Error al ingresar a la base de datos\n";
+    }
+    ifstream readOut;
     readOut.open("Audifonos.txt", ios::out );
 
     if (readOut.is_open())
       {
-
         while ( getline (readOut,line) )
         {
           cout << line << '\n';
@@ -36,17 +42,18 @@ void Audifonos::setData(string miNombre, float miPrecio, string miCategoria, str
 
 void Audifonos::getData()
 {
+    ifstream readOut;
+    string line;
+    readOut.open("Audifonos.txt");
+    while( getline(readOut,line) )
+    {
 
-    cout                           <<endl
-        <<"Codigo: "<<codigo       <<endl
-        <<"Nombre: "<<nombre       <<endl
-        <<"Categoria: "<<categoria <<endl
-        <<"Precio: "<<precio       <<endl
-        <<"Cantidad: "<<cantidad   <<endl
-        <<"Conexion: "<<conexion   <<endl
-        <<"Tier1: "<<tier1         <<endl
-        <<"Tier2: "<<tier2         <<endl
-                                   <<endl;
+
+        cout << line << '\n';
+
+
+
+    }
 }
 
 

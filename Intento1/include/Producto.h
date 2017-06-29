@@ -11,14 +11,14 @@ class Producto
         int cantidad;
 
     public:
-        Producto();
-        virtual void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad);
-        virtual void getData();
-        virtual string getCategoria();
-        virtual string getNombre();
-        virtual string getCodigo();
-        virtual float getPrecio();
-        virtual int getCantidad();
+
+        virtual void setData()=0;
+        virtual void getData()=0;
+        virtual string getCategoria()=0;
+        virtual string getNombre()=0;
+        virtual string getCodigo()=0;
+        virtual float getPrecio()=0;
+        virtual int getCantidad()=0;
 
 };
 

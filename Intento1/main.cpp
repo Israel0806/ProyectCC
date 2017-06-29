@@ -18,62 +18,14 @@
 #include <fstream>
 
 
-//A1023
-//I102
 using namespace std;
-
-
-
-
-/* de char a int
-
-#include <stdlib.h>
-char a[]={'1','2','3'};
-int b=atoi(a);
-cout<<b+2;
-
-
-burbuja:
-for(int i=0;i<f2;i++)
-{
-    for(int j=0;j<f2;j++)
-    {
-        if(strcmp(producto2[i],producto2[j])<0)
-        {
-
-        }
-    }
-}
-
-*/
-//Declaracion de instancias
-Clientes clientes[20];
-Computadora computadoras[20];
-Audifonos audifonos[20];
-Software software[20];
-TV Tv[20];
-Impresoras impresoras[20];
-/*vector <Clientes *> clientes;
-vector <Computadora *> computadoras;*/
-
-
-
-vector <Producto *> productos;
-
-
-/*
-
-
-
-
-
-*/
 
 void printMenu();
 void printCategorias();
 void printComponentes();
-void ordenAlfabetico(string categoria,vector<Producto *> productos);
-void ordenPrecio(string categoria,vector<Producto *> productos);
+void MostrarCodigo(string categoria);
+void MostrarNombre(string categoria);
+void MostrarProducto();
 
 void comprobar2Op(int &x);
 void comprobar3Op(int &x);
@@ -85,18 +37,19 @@ void comprobar8Op(int &x);
 int main()
 {
     //Declaracion de instancias
-    Clientes clientes[20];
-    Computadora computadoras[20];
-    Audifonos audifonos[20];
-    Software software[20];
-    TV Tv[20];
-    Impresoras impresoras[20];
+    system("Title Proyecto Base de Datos");
+
+
+    Clientes clientes;
+    Computadora *computadoras;
+    Audifonos *audifonos;
+    Software *software;
+    TV *Tv;
+    Impresoras *impresoras;
+    Queue<Clientes*> Cola;
+
     /*vector <Clientes *> clientes;
     vector <Computadora *> computadoras;*/
-
-
-
-    vector <Producto *> productos;
     /*for(int y=0; y<20; y++) //Queda pendiente mejorar el push back
     {
         productos.push_back(&computadoras[y]);
@@ -107,11 +60,10 @@ int main()
     }*/
 
     //Declaracion de variables
-    int p1,p2,p3,p4,p5; //Contador de cada tipo de producto, codigo
-
-    int op,c=0,p=0,cat,lo;
+    int p0,p1,p2,p3,p4,p5; //Contador de cada tipo de producto, codigo
+    int op,cat,lo;
     int edad,cantidad;
-    float precio;
+    float precio,capital;
     string direccion,tipo,categoria;
     char nombre[30],sexo;
     do
@@ -122,30 +74,62 @@ int main()
             {
             case 1:
                 {
+                ifstream readOut;
+                readOut.open("CodCliente.txt", ios::out );
+
+                ofstream Modify;
+                Modify.open("CodCliente.txt", ios::in);
+                if (readOut.is_open())
+                  {
+                    int a=0;
+                    string line;
+                    while ( getline (readOut,line) )
+                    {
+                        a+=line.size()+1;
+                        if(line=="codigos")
+                        {
+                            getline(readOut,line);
+                            a+=line.size();
+                            p0=atoi(line.c_str());
+                            p0++;
+                            cout << p0 << '\n';
+                            Modify.seekp(a);
+                            Modify <<p0;
+                            Modify.close();
+                            readOut.close();
+                            break;
+                        }
+                    }
+                  }
+                else
+                {
+                    cout<<"error\n";
+                }
+
                 //datos del cliente
-                cout<<"\nDatos del cliente "<<c+1<<": \n\n";
+                cout<<"\nDatos del cliente "<<p0<<": \n\n";
                 cout<<"Ingrese el nombre: "; cin>>nombre;
                 cout<<"Ingrese la direccion: "; cin>>direccion;
                 cout<<"Ingrese la edad: "; cin>>edad;
-                //cout<<"Ingrese las preferencias: "; cin>>preferencia;
                 cout<<"Ingrese el sexo: "; cin>>sexo;
+                cout<<"Ingrese su capital: "; cin>>capital;
+                string nom=nombre;
 
-                //Coloca los datos del cliente en un array(por ahora)
-                clientes[c].setData(nombre,direccion,edad,sexo);
-                c++; //actualiza numero de cliente(codigo)
+
+                clientes.setData(nom,direccion,edad,sexo,capital,p0);
+                Cola.push(clientes);
+                cout<<Cola;
                 break;
                 }
             case 2:
                 {
-
                 printCategorias(); cin>>cat;
                 comprobar5Op(cat);
                 switch(cat)
                 {
                     case 1:
                         {
-
-                            char *au=new char[2]; //codigo
+                            char *au=new char[3]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -153,7 +137,7 @@ int main()
 
                             string tier1,tier2,conexion;
 
-                            cout<<"Ingrese el Nombre del Producto: ";
+                            cout<<"\n\nIngrese el Nombre del Producto: ";
                             cin>>nombre;
                             nomb=nombre;
 
@@ -222,16 +206,14 @@ int main()
                             }
                             readOut.close();
 
-
                             au[1]='0'+p1;
-
+                            au[2]='\0';
                             cod=au;
 
                             cout<<"\n\n\ncodigo: "<<cod<<endl<<endl;
 
 
-                            audifonos[p1].setData(nomb,precio,"Audifonos",cod,cantidad,conexion,tier1,tier2);
-                            productos.push_back(&audifonos[p1]);
+                            audifonos->setData(nomb,precio,"Audifonos",cod,cantidad,conexion,tier1,tier2);
                             //productos[(int(productos.size()))]->getData();
                             delete r;
                             delete [] au;
@@ -241,7 +223,7 @@ int main()
                         {
                          //Computadoras
                             //char *au= new char [4];
-                            char *comp= new char[2]; //codigo
+                            char *comp= new char[3]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -269,28 +251,20 @@ int main()
                             switch(*r)
                             {
                             case 1:
-
                                 componente="Fuente";
                             case 2:
-
                                 componente="CPU";
                             case 3:
-
-                                componente="Memoria RAM";
+                                componente="Memoria-RAM";
                             case 4:
-
                                 componente="HDD";
                             case 5:
-
                                 componente="GPU";
                             case 6:
-
                                 componente="MotherBoard";
                             case 7:
-
                                 componente="Case";
                             case 8:
-
                                 componente="Perifericos";
                             }
 
@@ -329,17 +303,11 @@ int main()
 
 
                             comp[1]='0'+p2;
-
-                            for(int i=0; i<2;i++)
-                            {
-                                cout<<"comp: "<<comp[i]<<endl;
-                            }
-
+                            comp[2]='\0';
                             //comp--;
                             cod=comp;
-                            cout<<"\n\n\ncodigo: "<<cod<<endl<<endl;
 
-                            computadoras[p2].setData(nomb,precio,"Computadoras",cod,cantidad,tipo);
+                            computadoras->setData(nomb,precio,"Computadoras",cod,cantidad,componente);
                             //productos.push_back(&computadoras[p2]);
                            // computadoras[p].getData();
                             delete r;
@@ -348,7 +316,7 @@ int main()
                         }
                     case 3:
                         {
-                            char *imp=new char[2]; //codigo
+                            char *imp=new char[3]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -425,6 +393,7 @@ int main()
                             }
 
                             imp[1]='0'+p3;
+                            imp[2]='\0';
 
                             //comp--;
                             cod=imp;
@@ -432,8 +401,7 @@ int main()
                             /*while(caracteristicas[i]!=NULL)
                                 carac[i]=caracteristicas[i];*/
 
-                            impresoras[p3].setData(nomb, precio, "Impresoras", cod, cantidad, tipo, caracteristica, tamanho);
-                            productos.push_back(&impresoras[p3]);
+                            impresoras->setData(nomb, precio, "Impresoras", cod, cantidad, tipo, caracteristica, tamanho);
                             //computadoras[p3].getData();
                             delete r;
                             delete[] imp;
@@ -443,7 +411,7 @@ int main()
                         {
                             //software
 
-                            char *soft=new char[2]; //codigo
+                            char *soft=new char[3]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -542,11 +510,11 @@ int main()
 
 
                             soft[1]='0'+p4;
+                            soft[2]='\0';
 
                             cod=soft;
 
-                            software[p4].setData(nomb,precio,"software",cod,cantidad,tier1,tier2);
-                            productos.push_back(&software[p4]);
+                            software->setData(nomb,precio,"software",cod,cantidad,tier1,tier2);
                             //computadoras[p4].getData();
                             delete r;
                             delete[] soft;
@@ -556,7 +524,7 @@ int main()
                         {
                             //television
 
-                            char *tele=new char[2]; //codigo
+                            char *tele=new char[3]; //codigo
                             int *r=new int;
 
                             string cod,nomb;
@@ -638,127 +606,62 @@ int main()
                             readOut.close();
 
                             tele[1]='0'+p5;
+                            tele[2]='\0';
 
                             cod=tele;
 
-                            Tv[p5].setData(nomb,precio,"television",cod,cantidad,calidad,caracteristicas,pantallaTy,tam);
-                            productos.push_back(&Tv[p5]);
+                            Tv->setData(nomb,precio,"television",cod,cantidad,calidad,caracteristicas,pantallaTy,tam);
                             //computadoras[p5].getData();
                             delete r;
                             delete[] tele;
                             break;
                         }
                 }
-
-
-
-
-
-                //Datos del producto
-                /*cout<<"\nDatos del producto "<<y+1<<": \n\n";
-                cout<<"Ingrese el nombre: "; cin>>nombre;
-                cout<<"Ingrese la categoria del producto: "; cin>>tipo;
-                cout<<"Ingrese la cantidad: "; cin>>cantidad;
-                cout<<"Ingrese el precio: "; cin>>precio;*/
-                //Coloca los datos del producto en un array(por ahora)
-                //productos.setData(nombre,tipo,cantidad,precio,y);
-
-                p++;//Actualiza numero de producto(codigo)
                 break;
                 }
             case 3:
+                {
+
                 //Muestra todos los datos de todos los productos
                 //productos.getAllData(y);
 
                 printCategorias();
                 cin>>lo;
                 comprobar5Op(lo);
+                cout<<endl;
                 (lo==1)? categoria="Audifonos" : (lo==2)? categoria="Computadoras" : (lo==3)? categoria="Impresoras" : (lo==4)? categoria="Software" : categoria="Television";
                 switch(lo)
                 {
-
                      case 1:
-
-                         {
-
-                            cout<<"1. Por Precio: "<<endl;
-                            cout<<"2. Por Orden Alfabetico: "<<endl;
-                            cin>>lo;
-                            comprobar2Op(lo);
-                            switch(lo)
-                            {
-                                case 1: ordenPrecio(categoria, productos); break;
-
-                                case 2: ordenAlfabetico(categoria, productos); break;
-                            }
+                        {
+                            audifonos->getData();
                             break;
-                         }
+                        }
                      case 2:
                         {
-
-                            cout<<"1. Por Precio: "<<endl;
-                            cout<<"2. Por Orden Alfabetico: "<<endl;
-                            cin>>lo;
-                            comprobar2Op(lo);
-                            switch(lo)
-                            {
-                                case 1: ordenPrecio(categoria, productos); break;
-
-                                case 2: ordenAlfabetico(categoria, productos); break;
-                            }
+                            computadoras->getData();
                             break;
                         }
                      case 3:
                         {
-
-                            cout<<"1. Por Precio: "<<endl;
-                            cout<<"2. Por Orden Alfabetico: "<<endl;
-                            cin>>lo;
-                            comprobar2Op(lo);
-                            switch(lo)
-                            {
-                                case 1: ordenPrecio(categoria, productos); break;
-
-                                case 2: ordenAlfabetico(categoria, productos); break;
-                            }
+                            impresoras->getData();
                             break;
                         }
                      case 4:
                         {
-
-                            cout<<"1. Por Precio: "<<endl;
-                            cout<<"2. Por Orden Alfabetico: "<<endl;
-                            cin>>lo;
-                            comprobar2Op(lo);
-                            switch(lo)
-                            {
-                                case 1: ordenPrecio(categoria, productos); break;
-
-                                case 2: ordenAlfabetico(categoria, productos); break;
-                            }
+                            software->getData();
                             break;
                         }
                      case 5:
                         {
-                            cout<<"1. Por Precio: "<<endl;
-                            cout<<"2. Por Orden Alfabetico: "<<endl;
-                            cin>>lo;
-                            comprobar2Op(lo);
-                            switch(lo)
-                            {
-                                case 1: ordenPrecio(categoria, productos); break;
-
-                                case 2: ordenAlfabetico(categoria, productos); break;
-                            }
+                            Tv->getData();
                             break;
                         }
                 }
-
-
-
+                }
                 break;
             case 4:
-                {
+                /*{
                 string lo;
                 vector <string> nombres;
                 //Busca un producto en especifico
@@ -766,10 +669,8 @@ int main()
                 cin>>lo;
                 for(unsigned i=0;i<productos.size();i++)
                 {
-                    nombres.push_back(productos[i]->getNombre());
+                    nombres.push_back(audifonos.getNombre());
                 }
-
-
                 vector<string>:: iterator it = find(nombres.begin(),nombres.end(),lo);
                 if(it!=nombres.end())
                 {
@@ -782,9 +683,6 @@ int main()
                 else
                 {
                     cout<<"Producto no encontrado"<<endl<<endl;
-
-
-
                 }
 
                 cout<<"Ingrese el Codigo: "<<endl;
@@ -811,30 +709,18 @@ int main()
                 }
 
                 break;
-                }
-
-
-
-
+                }*/
             case 5:
-
                 //Realiza la venta de un producto
-
-
-
-
 
                 break;
             case 6:
                 //Termina el programa
                 break;
-            //default:
-                //cout<<"Ingrese opcion correcta\n";
-
             }
         cout<<endl;
-        system("pause");
-        system("cls");
+        /*system("pause");
+        system("cls");*/
     }
     while(op!=6);
     return 0;
@@ -842,25 +728,27 @@ int main()
 
 void printMenu()
 {
-    cout<<"\t\t\t\t\t\t Menu de opciones"<<endl     //Ponerle nombre en vez menu de opciones
+    system("pause");
+    system("cls");
+    cout<<"\t\t\t\t\t\t Menu de opciones\n"<<endl     //Ponerle nombre en vez menu de opciones
         <<" 1.Ingresar cliente"  <<endl
         <<" 2.Ingresar producto" <<endl
         <<" 3.Lista de productos"<<endl
         <<" 4.Buscar producto"   <<endl
         <<" 5.Vender producto"   <<endl
-        <<" 6.Salir"             <<endl
-        <<"Ingrese una opcion"   <<endl;
+        <<" 6.Salir\n"           <<endl
+        <<"Ingrese una opcion: ";
 }
 
 void printCategorias()
 {
     /*system("cls");*/
-    cout<<"\n\n 1. Audifonos "   <<endl
+    cout<<"\n 1. Audifonos "   <<endl
         <<" 2. Computadoras "    <<endl
         <<" 3. Impresoras "      <<endl
         <<" 4. Software "        <<endl
-        <<" 5. Television "      <<endl
-        <<"\nIngrese una opcion" <<endl;
+        <<" 5. Television\n "    <<endl
+        <<"Ingrese una opcion: ";
 
 
 }
@@ -882,7 +770,9 @@ void printComponentes(){
 }
 
 
-
+/*void MostrarCodigo(string categoria);
+void MostrarNombre(string categoria);
+void MostrarProducto();
 
 
 void ordenPrecio(string categoria,vector<Producto *> productos)
@@ -890,7 +780,7 @@ void ordenPrecio(string categoria,vector<Producto *> productos)
     vector<int> pos;
     int i=0,x=0;
     for(;i<int(productos.size());i++)
-    {
+
         if(productos[i]->getCategoria()==categoria)
         {
             pos.push_back(i);
@@ -916,61 +806,7 @@ void ordenPrecio(string categoria,vector<Producto *> productos)
     i=0;
     for(;i<int(pos.size());i++,x++)
         productos[(pos[x])]->getData();
-}
-
-
-
-void ordenAlfabetico(string categoria,vector<Producto *> productos)
-{
-/*    vector<int> pos;
-    vector<int>::iterator it;
-    int i=0;
-    for(int f=0; int(f<productos.size());f++)
-    {
-        it = find(productos.begin(),productos.end(),categoria);
-        if(it==categoria)
-            {
-                it=i++;
-                pos.push_back(it);
-            }
-    }
-    int *point=&pos;
-    for(int i=0;i<pos.size();i++)
-    {
-        cout<<"asds\n";
-    }*/
-
-    vector<int> pos;
-    int i=0,x=0;
-    for(;i<int(productos.size());i++)
-    {
-        if(productos[i]->getCategoria()==categoria)
-        {
-            pos.push_back(i);
-        }
-    }
-    vector <int>temp=pos;
-    for(i=0;i<int(pos.size());i++)
-    {
-        for(int j=0;j<int(pos.size());j++)
-        {
-            //if(strcmp(producto2[i],producto2[j])<0)
-            if(productos[i]->getNombre()>productos[j]->getNombre())
-            {
-                int p1;
-                p1=temp[i];
-                temp[i]=temp[j];
-                temp[j]=p1;
-            }
-        }
-    }
-    pos=temp;
-
-    i=0;
-    for(;i<int(pos.size());i++,x++)
-        productos[(pos[x])]->getData();
-}
-
+}*/
 
 
 void comprobar2Op(int &x){
@@ -1019,7 +855,6 @@ while(x!=1 && x!=2 && x!=3 && x!=4 && x!=5 && x!=6)
     cout<<"Opcion Incorrecta\n";
     cin>>x;
     }
-
 }
 
 

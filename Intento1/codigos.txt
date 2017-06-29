@@ -1,10 +1,10 @@
 codigo1
 3
 codigo2
-9
+6
 codigo3
 2
 codigo4
-9
+6
 codigo5
 3

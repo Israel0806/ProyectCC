@@ -7,13 +7,20 @@ Software::Software()
 
 void Software::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miTier1, string miTier2)
 {
-    fstream readIn;
-    readIn.open("Software.txt", ios::app | ios::in );
-
-    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTier1 << ' ' << miTier2 <<endl;
-    //readIn.close(); fstream codigos; codigos.open("Codigos.txt",ios::
-    ifstream readOut;
     string line;
+    ofstream readIn;
+    readIn.open("Software.txt", ios::app | ios::in );
+    if( readIn.is_open() )
+    {
+        readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTier1 << ' ' << miTier2 <<endl;
+        cout<<"Se ingresaron los datos correctamente:\n\n";
+        readIn.close();
+    }
+    else
+    {
+        cout<<"Error al ingresar a la base de datos\n";
+    }
+    ifstream readOut;
     readOut.open("Software.txt", ios::out );
     if (readOut.is_open())
       {
@@ -32,15 +39,13 @@ void Software::setData(string miNombre, float miPrecio, string miCategoria, stri
 
 void Software::getData()
 {
-    cout                           <<endl
-        <<"Codigo: "<<codigo       <<endl
-        <<"Nombre: "<<nombre       <<endl
-        <<"Categoria: "<<categoria <<endl
-        <<"Precio: "<<precio       <<endl
-        <<"Cantidad: "<<cantidad   <<endl
-        <<"Tier1: "<<Tier1         <<endl
-        <<"Tier2: "<<Tier2         <<endl
-                                   <<endl;
+    ifstream readOut;
+    string line;
+    readOut.open("Software.txt");
+    while( getline(readOut,line) )
+    {
+        cout << line << '\n';
+    }
 }
 
 string Software::getCategoria()

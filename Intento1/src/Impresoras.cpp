@@ -8,12 +8,20 @@ Impresoras::Impresoras()
 
 void Impresoras::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miTipo, string miCaracteristica,string miTamanho)
 {
-    fstream readIn;
-    readIn.open("Impresoras.txt", ios::app | ios::in );
-    readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTipo << ' ' << miCaracteristica << ' ' << miTamanho <<endl;
-    readIn.close();
-    ifstream readOut;
     string line;
+    ofstream readIn;
+    readIn.open("Impresoras.txt", ios::app | ios::in );
+    if( readIn.is_open() )
+    {
+        readIn<< miCodigo << ' ' << miNombre << ' ' << miCategoria << ' ' << miPrecio << ' ' << miCantidad << ' ' << miTipo << ' ' << miCaracteristica << ' ' << miTamanho <<endl;
+        cout<<"Se ingresaron los datos correctamente:\n\n";
+        readIn.close();
+    }
+    else
+    {
+        cout<<"Error al ingresar a la base de datos\n";
+    }
+    ifstream readOut;
     readOut.open("Impresoras.txt", ios::out );
     if (readOut.is_open())
       {
@@ -32,16 +40,13 @@ void Impresoras::setData(string miNombre, float miPrecio, string miCategoria, st
 
 void Impresoras::getData()
 {
-    cout                                      <<endl
-        <<"Codigo: "<<codigo                  <<endl
-        <<"Nombre: "<<nombre                  <<endl
-        <<"Categoria: "<<categoria            <<endl
-        <<"Precio: "<<precio                  <<endl
-        <<"Cantidad: "<<cantidad              <<endl
-        <<"tipo: "<<tipo                      <<endl
-        <<"Caracteristica: "<<caracteristicas <<endl
-        <<"tamanho: "<<tamanho                <<endl
-                                              <<endl;
+    ifstream readOut;
+    string line;
+    readOut.open("Impresoras.txt");
+    while( getline(readOut,line) )
+    {
+        cout << line << '\n';
+    }
 }
 
 string Impresoras::getCategoria()

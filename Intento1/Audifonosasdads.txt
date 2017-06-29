@@ -1,3 +1,0 @@
-Nombre   		Precio   Categoria   Cantidad   Codigo   Conexion   Tier1   Tier2
-SennHeiser-HD 598SE     154	 Audifonos     3         A0      Conexion alambrica  Auricular activo Auriculares abiertos
-AudioTechnica-ATH-M50x 147.5 Audifonos 5 A0 Conexion alambrica Auricular activo Auriculares cerrados 
