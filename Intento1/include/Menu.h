@@ -197,9 +197,7 @@ public:
 
                     cout<<"\n\n\ncodigo: "<<cod<<endl<<endl;
 
-
                     audifonos->setData(nomb,precio,"Audifonos",cod,cantidad,conexion,tier1,tier2);
-                    //productos[(int(productos.size()))]->getData();
                     delete r;
                     delete [] au;
                     break;
@@ -304,15 +302,8 @@ public:
                     int *r=new int;
 
                     string cod,nomb;
-                    imp[0]='I';
-                    //void setData(string miNombre, float miPrecio,
-                    //string miCategoria, s
-                    //tring miCodigo, int miCantidad,
-                    //string miTipo, string miCaracteristica[]);
-
-
                     string caracteristica,tamanho,tipo;
-
+                    imp[0]='I';
 
                     cout<<"Ingrese el Nombre del Producto: ";
                     cin>>nombre;
@@ -379,14 +370,10 @@ public:
                     imp[1]='0'+p3;
                     imp[2]='\0';
 
-                    //comp--;
                     cod=imp;
 
-                    /*while(caracteristicas[i]!=NULL)
-                        carac[i]=caracteristicas[i];*/
-
                     impresoras->setData(nomb, precio, "Impresoras", cod, cantidad, tipo, caracteristica, tamanho);
-                    //computadoras[p3].getData();
+
                     delete r;
                     delete[] imp;
                     break;
@@ -767,7 +754,6 @@ public:
                         stocks[i]-=compras[i];
                         int stock=stocks[i];
                         Tv->modifyCantidad(cod,stock);
-
                         break;
                         }
                     default:
@@ -780,13 +766,12 @@ public:
                 boleta+= stocks[i]*precios[i];
             if( boleta<clientes.getCapital(codCliente) )
             {
-                cout<<"clientes.getCapital(codCliente): "<<clientes.getCapital(codCliente)<<endl;
                 cout<<"El total a pagar es: $"<<boleta<<endl<<endl;
                 cout<<"Gracias por comprar en nuestra tienda, vuelva pronto!"<<endl;
+                Cola.pop(codCliente);
             }
             else
                 cout<<"No cuenta con el dinero suficiente para la transaccion"<<endl;
-            Cola.pop(codCliente);
         }
         else
         {

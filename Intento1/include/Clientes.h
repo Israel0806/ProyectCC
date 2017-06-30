@@ -30,6 +30,7 @@ template<class T>
 class Queue : public Clientes
 {
 public:
+    // se elimina a un cliente de la cola
     void pop(string deleteCliente)
     {
         string line,nombre,codigo,direccion,edad,sexo,capital;
@@ -52,6 +53,8 @@ public:
         rename("temp.txt","Clientes.txt");
         cout <<endl;
     }
+
+    // se ingresa al txt de clientes
     void push(Clientes &c)
     {
         ofstream readIn;
@@ -60,6 +63,7 @@ public:
         readIn.close();
     }
 
+    // para mostrar a un cliente, toda su informacion
     friend ostream& operator<<(ostream &o, Queue<T> &c) //clase amiga
     {
         string line,nombre,codigo,direccion,edad,sexo,capital;
