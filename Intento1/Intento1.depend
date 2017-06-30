@@ -347,7 +347,7 @@
 1498774256 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\tv.cpp
 	"TV.h"
 
-1498771083 source:c:\users\israe\desktop\proyecto final 1.0\intento1\main.cpp
+1498796139 source:c:\users\israe\desktop\proyecto final 1.0\intento1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<vector>
@@ -357,7 +357,7 @@
 	<fstream>
 	"Menu.h"
 
-1498774369 c:\users\israe\desktop\proyecto final 1.0\intento1\include\menu.h
+1498795948 c:\users\israe\desktop\proyecto final 1.0\intento1\include\menu.h
 	<iostream>
 	<map>
 	"Clientes.h"
@@ -368,56 +368,56 @@
 	"TV.h"
 	"Computadora.h"
 
-1498780997 c:\users\israe\desktop\proyecto final 1.0\intento1\include\clientes.h
+1498794972 c:\users\israe\desktop\proyecto final 1.0\intento1\include\clientes.h
 	<iostream>
 	<vector>
 	<fstream>
 
-1498773945 c:\users\israe\desktop\proyecto final 1.0\intento1\include\producto.h
+1498794733 c:\users\israe\desktop\proyecto final 1.0\intento1\include\producto.h
 	<iostream>
 
-1498773931 c:\users\israe\desktop\proyecto final 1.0\intento1\include\audifonos.h
+1498792195 c:\users\israe\desktop\proyecto final 1.0\intento1\include\audifonos.h
 	"Producto.h"
 
-1498774256 c:\users\israe\desktop\proyecto final 1.0\intento1\include\impresoras.h
-	"Producto.h"
-	<fstream>
-
-1498774266 c:\users\israe\desktop\proyecto final 1.0\intento1\include\software.h
+1498795923 c:\users\israe\desktop\proyecto final 1.0\intento1\include\impresoras.h
 	"Producto.h"
 	<fstream>
 
-1498774256 c:\users\israe\desktop\proyecto final 1.0\intento1\include\tv.h
+1498796091 c:\users\israe\desktop\proyecto final 1.0\intento1\include\software.h
 	"Producto.h"
 	<fstream>
 
-1498774256 c:\users\israe\desktop\proyecto final 1.0\intento1\include\computadora.h
+1498796139 c:\users\israe\desktop\proyecto final 1.0\intento1\include\tv.h
+	"Producto.h"
+	<fstream>
+
+1498795881 c:\users\israe\desktop\proyecto final 1.0\intento1\include\computadora.h
 	"Producto.h"
 	"fstream"
 
-1498773908 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\audifonos.cpp
+1498792195 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\audifonos.cpp
 	"Audifonos.h"
 	<fstream>
 
-1498759457 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\clientes.cpp
+1498795074 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\clientes.cpp
 	"Clientes.h"
 	<iostream>
 
-1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\computadora.cpp
+1498795882 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\computadora.cpp
 	"Computadora.h"
 	<string.h>
 	<stdlib.h>
 
-1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\impresoras.cpp
+1498796151 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\impresoras.cpp
 	"Impresoras.h"
 
 1498712610 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\menu.cpp
 
 1498707228 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\producto.cpp
 
-1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\software.cpp
+1498796092 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\software.cpp
 	"Software.h"
 
-1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\tv.cpp
+1498796139 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\tv.cpp
 	"TV.h"
 

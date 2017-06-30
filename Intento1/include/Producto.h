@@ -15,7 +15,7 @@ class Producto
         virtual string getCategoria()=0;
         virtual string getNombre() {}
         virtual string getCodigo()=0;
-        virtual float getPrecio()=0;
+        virtual float getPrecio() {}
         virtual int getCantidad() {}
         virtual void getProducto() {}
 };

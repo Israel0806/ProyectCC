@@ -49,6 +49,7 @@ class Comando
 {
 public:
     virtual void execute()=0;
+    virtual ~Comando() {}
 };
 
 // Receiver Class
@@ -657,7 +658,7 @@ public:
     void op5()
     {
         int compra;
-        vector <string> productos;
+        vector <int> precios;
         map <int,int> stocks;
         vector <int> compras;
         string codCliente;
@@ -673,20 +674,20 @@ public:
                 cout<<endl<<"Ingrese el codigo del producto "<<i+1<<": ";
                 cin>>codProducto;
                 string cod=codProducto;
-                productos.push_back(cod);
                 switch(codProducto[0])
                 {
                     case 'A':
                         {
                         stocks.insert ( pair<int,int>(i,audifonos->getCantidad(codProducto)));
                         cout<<endl
-                            <<"Nombre: "<<audifonos->getNombre(cod)<<endl<<endl;
-                        cout<<"Ingrese la cantidad a comprar: "; cin>>compra;
+                            <<"Nombre: "<<audifonos->getNombre(cod)<<endl<<endl
+                            <<"Ingrese la cantidad a comprar: "; cin>>compra;
                         while(compra>stocks[i])
                         {
                             cout<<"No existe el stock suficiente, ingresa otra cantidad menor o igual a "<<stocks[i] <<":"<<endl;
                             cin>>compra;
                         }
+                        precios.push_back( audifonos->getPrecio(codProducto) );
                         compras.push_back(compra);
                         stocks[i]-=compras[i];
                         int stock=stocks[i];
@@ -705,6 +706,7 @@ public:
                             cout<<"No existe el stock suficiente, ingresa otra cantidad menor o igual a "<<stocks[i] <<":"<<endl;
                             cin>>compra;
                         }
+                        precios.push_back( computadoras->getPrecio(codProducto) );
                         compras.push_back(compra);
                         stocks[i]-=compras[i];
                         int stock=stocks[i];
@@ -714,6 +716,7 @@ public:
                         }
                     case 'I':
                         {
+                        precios.push_back( impresoras->getPrecio(codProducto) );
                         stocks.insert ( pair<int,int>(i,impresoras->getCantidad(codProducto)));
                         cout<<endl
                             <<"Nombre: "<<impresoras->getNombre(cod)<<endl<<endl;
@@ -732,6 +735,7 @@ public:
                         }
                     case 'S':
                         {
+                        precios.push_back( software->getPrecio(codProducto) );
                         stocks.insert ( pair<int,int>(i,software->getCantidad(codProducto)));
                         cout<<endl
                             <<"Nombre: "<<software->getNombre(cod)<<endl<<endl;
@@ -750,6 +754,7 @@ public:
                         }
                     case 'T':
                         {
+                        precios.push_back( Tv->getPrecio(codProducto) );
                         stocks.insert ( pair<int,int>(i,Tv->getCantidad(codProducto)));
                         cout<<endl
                             <<"Nombre: "<<Tv->getNombre(cod)<<endl<<endl;
@@ -770,14 +775,24 @@ public:
                         cout<<"No existe el codigo del producto"<<endl;
                         break;
                 }
-
             }
+            float boleta=0;
+            for(int i=0;i<num;i++)
+                boleta+= stocks[i]*precios[i];
+            if( boleta<clientes.getCapital(codCliente) )
+            {
+                cout<<"clientes.getCapital(codCliente): "<<clientes.getCapital(codCliente)<<endl;
+                cout<<"El total a pagar es: $"<<boleta<<endl<<endl;
+                cout<<"Gracias por comprar en nuestra tienda, vuelva pronto!"<<endl;
+            }
+            else
+                cout<<"No cuenta con el dinero suficiente para la transaccion"<<endl;
+            Cola.pop(codCliente);
         }
         else
         {
             cout<<"Codigo No Existente"<<endl;
         }
-
     }
 };
 
@@ -789,6 +804,7 @@ private:
 public:
     Opcion1(Opcion *opcion) : pOpcion(opcion) {}
     void execute() { pOpcion->op1(); }
+    ~Opcion1() {}
 };
 
 // Command for entering op2
@@ -799,6 +815,7 @@ private:
 public:
     Opcion2(Opcion *opcion) : pOpcion(opcion) {}
     void execute() { pOpcion->op2(); }
+    ~Opcion2() {}
 };
 
 class Opcion3 : public Comando
@@ -808,6 +825,7 @@ private:
 public:
     Opcion3(Opcion *opcion) : pOpcion(opcion) {}
     void execute() { pOpcion->op3(); }
+    ~Opcion3() {}
 };
 
 class Opcion4 : public Comando
@@ -817,6 +835,7 @@ private:
 public:
     Opcion4(Opcion *opcion) : pOpcion(opcion) {}
     void execute() { pOpcion->op4(); }
+    ~Opcion4() {}
 };
 
 class Opcion5 : public Comando
@@ -826,6 +845,7 @@ private:
 public:
     Opcion5(Opcion *opcion) : pOpcion(opcion) {}
     void execute() { pOpcion->op5(); }
+    ~Opcion5() {}
 };
 
 // Invoker
@@ -837,6 +857,7 @@ private:
 public:
     void setComando(Comando *Cmd) { pCmd=Cmd; }
     void buttonPressed() { pCmd->execute(); }
+    ~Menu() {}
 };
 
 void comprobar2Op(int &x){

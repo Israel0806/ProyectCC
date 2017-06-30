@@ -77,7 +77,27 @@ string Audifonos::getNombre(string miCodigo)
 
 string Audifonos::getCodigo() { return codigo; }
 
-float Audifonos::getPrecio() { return precio; }
+float Audifonos::getPrecio(string miCodigo)
+{
+    ifstream readOut;
+    readOut.open("Audifonos.txt", ios::out);
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> conexion >> tier1 >> tier2 )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+        readOut.close();
+    }
+    else
+    {
+        cout<<"No se pudo accesar a la base de datos"<<endl;
+    }
+    return precio;
+}
 
 int Audifonos::getCantidad(string miCodigo)
 {

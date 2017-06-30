@@ -102,6 +102,13 @@ int main()
         system("cls");*/
     }
     while(op!=6);
+    delete opcion;
+    delete menu;
+    delete op1;
+    delete op2;
+    delete op3;
+    delete op4;
+     delete op5;
     return 0;
 }
 

@@ -17,7 +17,7 @@ class TV : public Producto
         string getCategoria();
         string getNombre(string miCodigo);
         string getCodigo();
-        float getPrecio();
+        float getPrecio(string miCodigo);
         int getCantidad(string miCodigo);
         void getProducto(string codigo);
         void modifyCantidad(string miCodigo, int stock);

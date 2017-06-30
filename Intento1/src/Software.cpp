@@ -76,8 +76,21 @@ string Software::getCodigo()
     return codigo;
 }
 
-float Software::getPrecio()
+float Software::getPrecio(string miCodigo)
 {
+    ifstream readOut;
+    readOut.open("Software.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tier1 >> tier2 )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+        readOut.close();
+    }
     return precio;
 }
 

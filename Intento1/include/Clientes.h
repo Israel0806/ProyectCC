@@ -23,13 +23,14 @@ class Clientes
         int getEdad() { return edad; }
         int getCodigo() { return codigo; }
         bool verifyCode(string code);
+        float getCapital(string miCodigo);
 };
 
 template<class T>
 class Queue : public Clientes
 {
 public:
-    T pop(string deleteCliente)
+    void pop(string deleteCliente)
     {
         string line,nombre,codigo,direccion,edad,sexo,capital;
         string miCodigo;
@@ -45,11 +46,11 @@ public:
                 readIn << miCodigo << ' ' << nombre << ' ' << direccion << ' ' << edad << ' ' << sexo << ' ' << capital << endl;
             }
         }
-    readIn.close();
-    readOut.close();
-    remove("Clientes.txt");
-    rename("temp.txt","Clientes.txt");
-    cout <<endl<<endl<<endl;
+        readIn.close();
+        readOut.close();
+        remove("Clientes.txt");
+        rename("temp.txt","Clientes.txt");
+        cout <<endl;
     }
     void push(Clientes &c)
     {
@@ -87,6 +88,4 @@ public:
         return o;
     }
 };
-
-
 #endif // CLIENTES_H

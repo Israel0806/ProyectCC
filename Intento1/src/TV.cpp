@@ -76,8 +76,21 @@ string TV::getCodigo()
     return codigo;
 }
 
-float TV::getPrecio()
+float TV::getPrecio(string miCodigo)
 {
+    ifstream readOut;
+    readOut.open("TV.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> calidad >> caracteristicas >> pantallaTy >> tam )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+        readOut.close();
+    }
     return precio;
 }
 

@@ -79,8 +79,25 @@ string Computadora::getCodigo()
     return codigo;
 }
 
-float Computadora::getPrecio()
+float Computadora::getPrecio(string miCodigo)
 {
+    ifstream readOut;
+    readOut.open("Computadora.txt", ios::out);
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+        readOut.close();
+    }
+    else
+    {
+        cout<<"No se pudo accesar a la base de datos"<<endl;
+    }
     return precio;
 }
 

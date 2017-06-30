@@ -15,6 +15,30 @@ void Clientes::setData(string miNombre, string miDireccion, int miEdad, char miS
         capital=miCapital;
 }
 
+float Clientes::getCapital(string miCodigo)
+{
+    string pCodigo;
+    ifstream readOut;
+    readOut.open("Clientes.txt", ios::out);
+    if(readOut.is_open())
+    {
+        while( readOut >> pCodigo >> nombre >> direccion >> edad >> sexo >> capital )
+        {
+            if(pCodigo==miCodigo)
+            {
+                break;
+            }
+        }
+        readOut.close();
+    }
+    else
+    {
+        cout<<"No se pudo accesar a la base de datos"<<endl;
+    }
+    return capital;
+}
+
+
 bool Clientes::verifyCode(string code)
 {
     string miCodigo;

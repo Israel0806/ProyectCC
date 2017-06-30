@@ -15,7 +15,7 @@ public:
     string getCategoria();
     string getNombre(string miCodigo);
     string getCodigo();
-    float getPrecio();
+    float getPrecio(string miCodigo);
     int getCantidad(string miCodigo);
     void getProducto(string miCodigo);
     void modifyCantidad(string miCodigo, int stock);

@@ -1,4 +1,4 @@
-S0 MavisBeacon_Teaches_Typing_Powered software 19.99 3 Educacion Tipeo 
+S0 MavisBeacon_Teaches_Typing_Powered software 19.99 2 Educacion Tipeo 
 S1 LeapFrog_cooking_Recipes_on_the_Road software 5.8 2 Educacion Ninhos 
 S2 Corel_Painter_Essential software 20 3 Diseño Photography 
 S3 QuickBooks_DesktopPro2017 software 299.99 10 Finanzas Contabilidad_de_empresas 

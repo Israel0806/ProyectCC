@@ -77,8 +77,21 @@ string Impresoras::getCodigo()
     return codigo;
 }
 
-float Impresoras::getPrecio()
+float Impresoras::getPrecio(string miCodigo)
 {
+    ifstream readOut;
+    readOut.open("Impresoras.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo >> caracteristicas >> tamanho )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+    readOut.close();
+    }
     return precio;
 }
 

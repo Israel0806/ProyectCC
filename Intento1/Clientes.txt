@@ -1,3 +1,2 @@
-1 1 1 1 1 1
-2 2 2 2 2 2
-3 3 3 3 3 3
+1 Israel_Lopez LeonXIII 18 M 500
+2 Eduardo_Segovia Villa_Jabiru 19 M 1000

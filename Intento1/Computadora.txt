@@ -1,4 +1,4 @@
-C0 EVGA-650GI Computadoras 74.99 10 Fuente
+C0 EVGA-650GI Computadoras 74.99 9 Fuente
 C1 Intel-7thGen-i7-7700K Computadoras 350 7 CPU
 C2 AsusDesigno-MHZ279-"27" Computadoras 227.98 2 Perifericos
 C3 Asus-GeForceGTX1070-8GB Computadoras 699.99 3 GPU
