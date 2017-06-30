@@ -47,22 +47,121 @@ void Audifonos::getData()
     readOut.open("Audifonos.txt");
     while( getline(readOut,line) )
     {
-
-
         cout << line << '\n';
-
-
-
     }
 }
 
-
 string Audifonos::getCategoria() { return categoria; }
 
-string Audifonos::getNombre() { return nombre; }
+string Audifonos::getNombre(string miCodigo)
+{
+    ifstream readOut;
+    readOut.open("Audifonos.txt", ios::out);
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> conexion >> tier1 >> tier2 )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+        readOut.close();
+    }
+    else
+    {
+        cout<<"No se pudo accesar a la base de datos"<<endl;
+    }
+    return nombre;
+}
 
 string Audifonos::getCodigo() { return codigo; }
 
 float Audifonos::getPrecio() { return precio; }
 
-int Audifonos::getCantidad() { return cantidad; }
+int Audifonos::getCantidad(string miCodigo)
+{
+    ifstream readOut;
+    readOut.open("Audifonos.txt", ios::out);
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> conexion >> tier1 >> tier2 )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+        readOut.close();
+    }
+    else
+    {
+        cout<<"No se pudo accesar a la base de datos"<<endl;
+    }
+    return cantidad;
+}
+
+Audifonos* Audifonos::instance=0;
+
+Audifonos* Audifonos::getInstance()
+{
+    if (instance == 0)
+        instance = new Audifonos();
+    return instance;
+}
+
+void Audifonos::getProducto(string miCodigo)
+{
+    ifstream readOut;
+    readOut.open("Audifonos.txt", ios::out);
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> conexion >> tier1 >> tier2 )
+        {
+            if(codigo==miCodigo)
+            {
+                cout<< "Datos del Producto:"        <<endl
+                    <<"Codigo: "<<codigo            <<endl
+                    <<"Nombre: "<<nombre            <<endl
+                    <<"Categoria: "<<categoria      <<endl
+                    <<"Precio: $"<<precio           <<endl
+                    <<"Stock: "<<cantidad           <<endl
+                    <<"Conexion: "<<conexion        <<endl
+                    <<"Tier1: "<<tier1              <<endl
+                    <<"Tier2: "<<tier2              <<endl<<endl<<endl;
+                break;
+            }
+        }
+        readOut.close();
+    }
+    else
+    {
+        cout<<"No se pudo accesar a la base de datos"<<endl;
+    }
+}
+
+
+void Audifonos::modifyCantidad(string miCodigo, int stock)
+{
+        ifstream readOut;
+        readOut.open("Audifonos.txt");
+        ofstream readIn;
+        readIn.open("temp.txt");
+        while ( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> conexion >> tier1 >> tier2 )
+        {
+            if ( miCodigo != codigo)
+            {
+                readIn<< codigo << ' ' << nombre << ' ' << categoria << ' ' << precio << ' ' << cantidad << ' ' << conexion << ' ' << tier1 << ' ' << tier2 << ' '<<endl;
+            }
+            else
+            {
+                readIn<< codigo << ' ' << nombre << ' ' << categoria << ' ' << precio << ' ' << stock << ' ' << conexion << ' ' << tier1 << ' ' << tier2 << ' '<<endl;
+            }
+    }
+    readIn.close();
+    readOut.close();
+    remove("Audifonos.txt");
+    rename("temp.txt","Audifonos.txt");
+    cout <<endl<<endl<<endl;
+}
+

@@ -54,8 +54,21 @@ string Impresoras::getCategoria()
     return categoria;
 }
 
-string Impresoras::getNombre()
+string Impresoras::getNombre(string miCodigo)
 {
+    ifstream readOut;
+    readOut.open("Impresoras.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo >> caracteristicas >> tamanho )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+    readOut.close();
+    }
     return nombre;
 }
 
@@ -69,7 +82,79 @@ float Impresoras::getPrecio()
     return precio;
 }
 
-int Impresoras::getCantidad()
+int Impresoras::getCantidad(string miCodigo)
 {
+    ifstream readOut;
+    readOut.open("Impresoras.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo >> caracteristicas >> tamanho )
+        {
+            if(codigo==miCodigo)
+            {
+                break;
+            }
+        }
+    readOut.close();
+    }
     return cantidad;
+}
+
+Impresoras* Impresoras::instance=0;
+
+Impresoras* Impresoras::getInstance()
+{
+    if (instance == 0)
+        instance = new Impresoras();
+    return instance;
+}
+
+
+void Impresoras::getProducto(string miCodigo)
+{
+    ifstream readOut;
+    readOut.open("Impresoras.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo >> caracteristicas >> tamanho )
+        {
+            if(codigo==miCodigo)
+            {
+                cout<< "Datos del Producto:"                <<endl
+                    <<"Codigo: "<<codigo                    <<endl
+                    <<"Nombre: "<<nombre                    <<endl
+                    <<"Categoria: "<<categoria              <<endl
+                    <<"Precio: $"<<precio                   <<endl
+                    <<"Stock: "<<cantidad                   <<endl
+                    <<"Tipo: "<<tipo                        <<endl
+                    <<"Caracteristica: "<<caracteristicas   <<endl
+                    <<"Tamanho: "<<tamanho                  <<endl<<endl<<endl;
+                break;
+            }
+        }
+    readOut.close();
+    }
+}
+
+
+void Impresoras::modifyCantidad(string miCodigo, int stock)
+{
+        ifstream readOut;
+        readOut.open("Impresoras.txt");
+        ofstream readIn;
+        readIn.open("temp.txt");
+        while ( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo >> caracteristicas >> tamanho )
+        {
+            if ( miCodigo != codigo)
+            {
+                readIn<< codigo << ' ' << nombre << ' ' << categoria << ' ' << precio << ' ' << cantidad << ' ' << tipo << ' ' << caracteristicas << ' ' << tamanho <<endl;            }
+            else
+            {
+                readIn<< codigo << ' ' << nombre << ' ' << categoria << ' ' << precio << ' ' << stock << ' ' << tipo << ' ' << caracteristicas << ' ' << tamanho <<endl;            }
+    }
+    readIn.close();
+    readOut.close();
+    remove("Impresoras.txt");
+    rename("temp.txt","Impresoras.txt");
+    cout <<endl<<endl<<endl;
 }

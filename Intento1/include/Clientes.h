@@ -16,40 +16,50 @@ class Clientes
     public:
         Clientes();
         void setData(string miNombre, string miDireccion, int miEdad, char miSexo, float miCapital, int miCodigo);
-
         string getNombre() { return nombre; }
         string getDireccion() { return direccion; }
         char getSexo() { return sexo; }
         float getCapital() { return capital; }
         int getEdad() { return edad; }
         int getCodigo() { return codigo; }
+        bool verifyCode(string code);
 };
 
 template<class T>
 class Queue : public Clientes
 {
 public:
-    /*T pop()
+    T pop(string deleteCliente)
     {
-        T first=items.front();
-        items.pop_back();
-        return first;
-    }*/
+        string line,nombre,codigo,direccion,edad,sexo,capital;
+        string miCodigo;
+        ifstream readOut;
+        readOut.open("Clientes.txt");
+
+        ofstream readIn;
+        readIn.open("temp.txt");
+        while ( readOut >> miCodigo >> nombre >> direccion >> edad >> sexo >> capital )
+        {
+            if ( miCodigo != deleteCliente)
+            {
+                readIn << miCodigo << ' ' << nombre << ' ' << direccion << ' ' << edad << ' ' << sexo << ' ' << capital << endl;
+            }
+        }
+    readIn.close();
+    readOut.close();
+    remove("Clientes.txt");
+    rename("temp.txt","Clientes.txt");
+    cout <<endl<<endl<<endl;
+    }
     void push(Clientes &c)
     {
         ofstream readIn;
         readIn.open("Clientes.txt", ios::app | ios::in);
         readIn << c.getCodigo() << ' ' << c.getNombre() << ' ' << c.getDireccion() << ' ' << c.getEdad() << ' ' << c.getSexo() << ' ' << c.getCapital() <<endl;
         readIn.close();
-        ifstream readOut;
-        readOut.open("Clientes.txt");
-        string line;
-        while( getline(readOut,line) )
-            cout<< line<< '\n';
-        readOut.close();
     }
 
-    friend ostream& operator<<(ostream &o, Queue<T> &c)
+    friend ostream& operator<<(ostream &o, Queue<T> &c) //clase amiga
     {
         string line,nombre,codigo,direccion,edad,sexo,capital;
         int i=1;
@@ -57,25 +67,21 @@ public:
         readOut.open("Clientes.txt", ios::out );
         if(readOut.is_open())
         {
-            o<<"ingreso al while\n\n";
-            while( getline(readOut,line) )
+            while( readOut >> codigo >> nombre >> direccion >> edad >> sexo >> capital )
             {
-                //o<<"\n\ningreso\n\n";
-                readOut >> codigo >> nombre >> direccion >> edad >> sexo >> capital;
-                o   <<"\n\n line: "<<line           <<endl<<endl
-                    << "Datos del cliente "<<i<<":" <<endl
+                o   << "Datos del cliente "<<i<<":" <<endl
                     <<"Codigo: "<<codigo            <<endl
                     <<"Nombre: "<<nombre            <<endl
                     <<"Direccion: "<<direccion      <<endl
                     <<"Edad: "<<edad                <<endl
                     <<"Sexo: "<<sexo                <<endl
-                    <<"Capital: $"<<capital         <<endl;
+                    <<"Capital: $"<<capital         <<endl<<endl<<endl;
                 i++;
             }
         }
         else
         {
-            cout<<"No se pudo ingresar a la base de datos"<<endl;
+            o<<"No se pudo ingresar a la base de datos"<<endl;
         }
         readOut.close();
         return o;

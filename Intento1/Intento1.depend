@@ -1,58 +1,56 @@
 # depslib dependency file v1.0
-1498578130 source:c:\users\israe\desktop\proyectcc\intento1\src\audifonos.cpp
+1498706844 source:c:\users\israe\desktop\proyectcc\intento1\src\audifonos.cpp
 	"Audifonos.h"
 	<fstream>
 
-1498421802 c:\users\israe\desktop\proyectcc\intento1\include\audifonos.h
+1498706844 c:\users\israe\desktop\proyectcc\intento1\include\audifonos.h
 	"Producto.h"
 
-1498421802 c:\users\israe\desktop\proyectcc\intento1\include\producto.h
+1498706844 c:\users\israe\desktop\proyectcc\intento1\include\producto.h
 	<iostream>
 
-1498674429 source:c:\users\israe\desktop\proyectcc\intento1\src\clientes.cpp
+1498706844 source:c:\users\israe\desktop\proyectcc\intento1\src\clientes.cpp
 	"Clientes.h"
 	<iostream>
 
-1498692633 c:\users\israe\desktop\proyectcc\intento1\include\clientes.h
+1498707073 c:\users\israe\desktop\proyectcc\intento1\include\clientes.h
 	<iostream>
 	<vector>
 	<fstream>
 
-1498577473 source:c:\users\israe\desktop\proyectcc\intento1\src\computadora.cpp
+1498706844 source:c:\users\israe\desktop\proyectcc\intento1\src\computadora.cpp
 	"Computadora.h"
 	<string.h>
 	<stdlib.h>
 
-1498421802 c:\users\israe\desktop\proyectcc\intento1\include\computadora.h
+1498706844 c:\users\israe\desktop\proyectcc\intento1\include\computadora.h
 	"Producto.h"
 	"fstream"
 
-1498578130 source:c:\users\israe\desktop\proyectcc\intento1\src\impresoras.cpp
+1498706844 source:c:\users\israe\desktop\proyectcc\intento1\src\impresoras.cpp
 	"Impresoras.h"
 
-1498421802 c:\users\israe\desktop\proyectcc\intento1\include\impresoras.h
+1498706844 c:\users\israe\desktop\proyectcc\intento1\include\impresoras.h
 	"Producto.h"
 	<fstream>
 
-1498527751 source:c:\users\israe\desktop\proyectcc\intento1\src\producto.cpp
-	"Producto.h"
-	<iostream>
+1498706844 source:c:\users\israe\desktop\proyectcc\intento1\src\producto.cpp
 
-1498578130 source:c:\users\israe\desktop\proyectcc\intento1\src\software.cpp
+1498706844 source:c:\users\israe\desktop\proyectcc\intento1\src\software.cpp
 	"Software.h"
 
-1498421802 c:\users\israe\desktop\proyectcc\intento1\include\software.h
+1498706844 c:\users\israe\desktop\proyectcc\intento1\include\software.h
 	"Producto.h"
 	<fstream>
 
-1498578130 source:c:\users\israe\desktop\proyectcc\intento1\src\tv.cpp
+1498706844 source:c:\users\israe\desktop\proyectcc\intento1\src\tv.cpp
 	"TV.h"
 
-1498421802 c:\users\israe\desktop\proyectcc\intento1\include\tv.h
+1498706844 c:\users\israe\desktop\proyectcc\intento1\include\tv.h
 	"Producto.h"
 	<fstream>
 
-1498692268 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
+1498706986 source:c:\users\israe\desktop\proyectcc\intento1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<vector>
@@ -133,5 +131,293 @@
 	"Software.h"
 
 1498578130 source:c:\users\wair.esp\desktop\proyectcc\intento1\src\tv.cpp
+	"TV.h"
+
+1498710244 source:c:\users\israe\desktop\copia\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	<algorithm>
+	<iterator>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+	<fstream>
+
+1498710117 c:\users\israe\desktop\copia\intento1\include\clientes.h
+	<iostream>
+	<vector>
+	<fstream>
+
+1498707781 c:\users\israe\desktop\copia\intento1\include\producto.h
+	<iostream>
+
+1498709677 c:\users\israe\desktop\copia\intento1\include\audifonos.h
+	"Producto.h"
+
+1498710046 c:\users\israe\desktop\copia\intento1\include\impresoras.h
+	"Producto.h"
+	<fstream>
+
+1498710046 c:\users\israe\desktop\copia\intento1\include\software.h
+	"Producto.h"
+	<fstream>
+
+1498710046 c:\users\israe\desktop\copia\intento1\include\tv.h
+	"Producto.h"
+	<fstream>
+
+1498709317 c:\users\israe\desktop\copia\intento1\include\computadora.h
+	"Producto.h"
+	"fstream"
+
+1498710117 source:c:\users\israe\desktop\copia\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1498710046 source:c:\users\israe\desktop\copia\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1498709995 source:c:\users\israe\desktop\copia\intento1\src\software.cpp
+	"Software.h"
+
+1498710046 source:c:\users\israe\desktop\copia\intento1\src\tv.cpp
+	"TV.h"
+
+1498709677 source:c:\users\israe\desktop\copia\intento1\src\audifonos.cpp
+	"Audifonos.h"
+	<fstream>
+
+1498709345 source:c:\users\israe\desktop\copia\intento1\src\computadora.cpp
+	"Computadora.h"
+	<string.h>
+	<stdlib.h>
+
+1498707228 source:c:\users\israe\desktop\copia\intento1\src\producto.cpp
+
+1498751225 source:c:\users\israe\desktop\copia - copy\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	<algorithm>
+	<iterator>
+	"Menu.h"
+	<fstream>
+
+1498762564 c:\users\israe\desktop\copia - copy\intento1\include\clientes.h
+	<iostream>
+	<vector>
+	<fstream>
+
+1498763907 c:\users\israe\desktop\copia - copy\intento1\include\producto.h
+	<iostream>
+
+1498763523 c:\users\israe\desktop\copia - copy\intento1\include\audifonos.h
+	"Producto.h"
+
+1498763720 c:\users\israe\desktop\copia - copy\intento1\include\impresoras.h
+	"Producto.h"
+	<fstream>
+
+1498763768 c:\users\israe\desktop\copia - copy\intento1\include\software.h
+	"Producto.h"
+	<fstream>
+
+1498763891 c:\users\israe\desktop\copia - copy\intento1\include\tv.h
+	"Producto.h"
+	<fstream>
+
+1498763579 c:\users\israe\desktop\copia - copy\intento1\include\computadora.h
+	"Producto.h"
+	"fstream"
+
+1498763661 source:c:\users\israe\desktop\copia - copy\intento1\src\audifonos.cpp
+	"Audifonos.h"
+	<fstream>
+
+1498759457 source:c:\users\israe\desktop\copia - copy\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1498763686 source:c:\users\israe\desktop\copia - copy\intento1\src\computadora.cpp
+	"Computadora.h"
+	<string.h>
+	<stdlib.h>
+
+1498763984 source:c:\users\israe\desktop\copia - copy\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1498707228 source:c:\users\israe\desktop\copia - copy\intento1\src\producto.cpp
+
+1498763992 source:c:\users\israe\desktop\copia - copy\intento1\src\software.cpp
+	"Software.h"
+
+1498754107 source:c:\users\israe\desktop\copia - copy\intento1\src\tv.cpp
+	"TV.h"
+
+1498712610 source:c:\users\israe\desktop\copia - copy\intento1\src\menu.cpp
+
+1498763523 c:\users\israe\desktop\copia - copy\intento1\include\menu.h
+	<iostream>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+
+1498771083 source:c:\users\israe\desktop\copia - copy - copy\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	<algorithm>
+	<iterator>
+	<fstream>
+	"Menu.h"
+
+1498774369 c:\users\israe\desktop\copia - copy - copy\intento1\include\menu.h
+	<iostream>
+	<map>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+
+1498772939 c:\users\israe\desktop\copia - copy - copy\intento1\include\clientes.h
+	<iostream>
+	<vector>
+	<fstream>
+
+1498773945 c:\users\israe\desktop\copia - copy - copy\intento1\include\producto.h
+	<iostream>
+
+1498773931 c:\users\israe\desktop\copia - copy - copy\intento1\include\audifonos.h
+	"Producto.h"
+
+1498774256 c:\users\israe\desktop\copia - copy - copy\intento1\include\impresoras.h
+	"Producto.h"
+	<fstream>
+
+1498774266 c:\users\israe\desktop\copia - copy - copy\intento1\include\software.h
+	"Producto.h"
+	<fstream>
+
+1498774256 c:\users\israe\desktop\copia - copy - copy\intento1\include\tv.h
+	"Producto.h"
+	<fstream>
+
+1498774256 c:\users\israe\desktop\copia - copy - copy\intento1\include\computadora.h
+	"Producto.h"
+	"fstream"
+
+1498773908 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\audifonos.cpp
+	"Audifonos.h"
+	<fstream>
+
+1498759457 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1498774256 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\computadora.cpp
+	"Computadora.h"
+	<string.h>
+	<stdlib.h>
+
+1498774256 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1498712610 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\menu.cpp
+
+1498707228 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\producto.cpp
+
+1498774256 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\software.cpp
+	"Software.h"
+
+1498774256 source:c:\users\israe\desktop\copia - copy - copy\intento1\src\tv.cpp
+	"TV.h"
+
+1498771083 source:c:\users\israe\desktop\proyecto final 1.0\intento1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<string.h>
+	<algorithm>
+	<iterator>
+	<fstream>
+	"Menu.h"
+
+1498774369 c:\users\israe\desktop\proyecto final 1.0\intento1\include\menu.h
+	<iostream>
+	<map>
+	"Clientes.h"
+	"Producto.h"
+	"Audifonos.h"
+	"Impresoras.h"
+	"Software.h"
+	"TV.h"
+	"Computadora.h"
+
+1498780997 c:\users\israe\desktop\proyecto final 1.0\intento1\include\clientes.h
+	<iostream>
+	<vector>
+	<fstream>
+
+1498773945 c:\users\israe\desktop\proyecto final 1.0\intento1\include\producto.h
+	<iostream>
+
+1498773931 c:\users\israe\desktop\proyecto final 1.0\intento1\include\audifonos.h
+	"Producto.h"
+
+1498774256 c:\users\israe\desktop\proyecto final 1.0\intento1\include\impresoras.h
+	"Producto.h"
+	<fstream>
+
+1498774266 c:\users\israe\desktop\proyecto final 1.0\intento1\include\software.h
+	"Producto.h"
+	<fstream>
+
+1498774256 c:\users\israe\desktop\proyecto final 1.0\intento1\include\tv.h
+	"Producto.h"
+	<fstream>
+
+1498774256 c:\users\israe\desktop\proyecto final 1.0\intento1\include\computadora.h
+	"Producto.h"
+	"fstream"
+
+1498773908 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\audifonos.cpp
+	"Audifonos.h"
+	<fstream>
+
+1498759457 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\clientes.cpp
+	"Clientes.h"
+	<iostream>
+
+1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\computadora.cpp
+	"Computadora.h"
+	<string.h>
+	<stdlib.h>
+
+1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\impresoras.cpp
+	"Impresoras.h"
+
+1498712610 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\menu.cpp
+
+1498707228 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\producto.cpp
+
+1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\software.cpp
+	"Software.h"
+
+1498774256 source:c:\users\israe\desktop\proyecto final 1.0\intento1\src\tv.cpp
 	"TV.h"
 

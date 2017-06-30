@@ -9,17 +9,15 @@ class Producto
         float precio;
         string codigo,nombre,categoria;
         int cantidad;
-
     public:
-
-        virtual void setData()=0;
+        virtual void setData() {}
         virtual void getData()=0;
         virtual string getCategoria()=0;
-        virtual string getNombre()=0;
+        virtual string getNombre() {}
         virtual string getCodigo()=0;
         virtual float getPrecio()=0;
-        virtual int getCantidad()=0;
-
+        virtual int getCantidad() {}
+        virtual void getProducto() {}
 };
 
 #endif // PRODUCTO_H

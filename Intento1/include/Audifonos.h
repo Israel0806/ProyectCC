@@ -5,19 +5,20 @@
 class Audifonos : public Producto
 {
 private:
-    //int cantidad;
-    string conexion,tier1,tier2;//,tier3,caracteristica;
-   // string codigo; Tier1 conexion Tier 2
-public:
+    string conexion,tier1,tier2;
+    static Audifonos* instance;
     Audifonos();
+public:
+    static Audifonos* getInstance();
     void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad,string miConexion,string miTier1,string miTier2);//,string miTier3,string miCaracteristica);
     void getData();
     string getCategoria();
-    string getNombre();
+    string getNombre(string miCodigo);
     string getCodigo();
     float getPrecio();
-    int getCantidad();
-
+    int getCantidad(string miCodigo);
+    void getProducto(string miCodigo);
+    void modifyCantidad(string miCodigo, int stock);
 };
 
 

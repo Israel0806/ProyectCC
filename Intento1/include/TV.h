@@ -8,18 +8,19 @@ class TV : public Producto
         //int codigo; // letra,calidad,caracteristicas,tipo del pantalla, tamaño
         float tam;
         string caracteristicas,pantallaTy,calidad;
-    public:
         TV();
+        static TV* instance;
+    public:
+        static TV* getInstance();
         void setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad, string miCalidad, string miCaracteristicas,string mipantallaTy, float miTam);
         void getData();
         string getCategoria();
-        string getNombre();
+        string getNombre(string miCodigo);
         string getCodigo();
         float getPrecio();
-        int getCantidad();
-
-
-
+        int getCantidad(string miCodigo);
+        void getProducto(string codigo);
+        void modifyCantidad(string miCodigo, int stock);
 };
 
 #endif // TV_H

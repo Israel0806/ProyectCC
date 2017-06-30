@@ -1,8 +1,7 @@
-S0 MavisBeacon_Teaches_Typing_Powered software 19.99 3 Educacion Tipeo
-S1 LeapFrog_cooking_Recipes_on_the_Road software 5.8 2 Educacion Ninhos
-S2 Corel_Painter_Essential software 20 3 Diseño Photography
-S3 QuickBooks_DesktopPro2017 software 299.99 10 Finanzas Contabilidad de empresas
-S4 Quicken_Deluxe2017 software 67.94 5 Finanzas Contabilidad personal
-S5 QuickBooks_Small_Business_Accounting software 299.99 5 Finanzas Distribucion de sueldos
-S6 Kaspersky_Internet_Security software 79.95 3 Seguridad Antivirus
-
+S0 MavisBeacon_Teaches_Typing_Powered software 19.99 3 Educacion Tipeo 
+S1 LeapFrog_cooking_Recipes_on_the_Road software 5.8 2 Educacion Ninhos 
+S2 Corel_Painter_Essential software 20 3 Diseño Photography 
+S3 QuickBooks_DesktopPro2017 software 299.99 10 Finanzas Contabilidad_de_empresas 
+S4 Quicken_Deluxe2017 software 67.94 5 Finanzas Contabilidad_personal 
+S5 QuickBooks_Small_Business_Accounting software 299.99 5 Finanzas Distribucion_de_sueldos 
+S6 Kaspersky_Internet_Security software 79.95 3 Seguridad Antivirus 

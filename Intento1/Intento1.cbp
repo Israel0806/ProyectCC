@@ -40,6 +40,7 @@
 		<Unit filename="include/Clientes.h" />
 		<Unit filename="include/Computadora.h" />
 		<Unit filename="include/Impresoras.h" />
+		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Producto.h" />
 		<Unit filename="include/Software.h" />
 		<Unit filename="include/TV.h" />
@@ -48,6 +49,7 @@
 		<Unit filename="src/Clientes.cpp" />
 		<Unit filename="src/Computadora.cpp" />
 		<Unit filename="src/Impresoras.cpp" />
+		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Producto.cpp" />
 		<Unit filename="src/Software.cpp" />
 		<Unit filename="src/TV.cpp" />

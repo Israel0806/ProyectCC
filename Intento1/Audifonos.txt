@@ -1,4 +1,4 @@
-A0 Sennheiser-HD598SE 154.00 Audifonos 3 Conexion alambrica Auricular activo Auriculares abiertos 
-A1 AudioTechnica-ATH-M50X Audifonos 147.50 3 Conexion alambrica Auricular activo Auriculares cerrados 
-A2 Foxtex-TH-500RP Audifonos 339.00 6 Conexion alambrica Auricular pasivo Auriculares abiertos 
-A3 Bowers&Wilkins-P7 Audifonos 399.95 16 Conexion wireless Auricular activo Auriculares cerrados 
+A0 Sennheiser-HD598SE Audifonos 154 4 Conexion_alambrica Auricular_activo Auriculares_abiertos 
+A1 AudioTechnica-ATH-M50X Audifonos 147.5 3 Conexion_alambrica Auricular_activo Auriculares_cerrados 
+A2 Foxtex-TH-500RP Audifonos 339 6 Conexion_alambrica Auricular_pasivo Auriculares_abiertos 
+A3 Bowers&Wilkins-P7 Audifonos 399.95 16 Conexion_wireless Auricular_activo Auriculares_cerrados 

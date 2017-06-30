@@ -1,3 +1,3 @@
-T1 TCL-55S405-Roku television 449.99 5 Ultra HD Smart LED 55
+T1 TCL-55S405-Roku television 449.99 5 Ultra_HD Smart LED 55
 T2 VIZIO-D_D43n-E1 television 385.01 9 HD Curvado LCD 43
-T3 LG_Electronics-OLED55B6P television 1996.99 2 Ultra HD 4K Smart OLED 55
+T3 LG_Electronics-OLED55B6P television 1996.99 2 Ultra_HD_4K Smart OLED 55

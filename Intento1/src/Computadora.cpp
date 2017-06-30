@@ -56,11 +56,21 @@ string Computadora::getCategoria()
     return categoria;
 }
 
-string Computadora::getNombre()
+string Computadora::getNombre(string miCodigo)
 {
     ifstream readOut;
-    readOut.open("Computadora.txt", ios::out );
-    readOut >> codigo >> nombre >> categoria >> precio >> cantidad >> tipo;
+    readOut.open("Computadora.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo )
+        {
+            if(codigo==miCodigo)
+            {
+                    break;
+            }
+        }
+        readOut.close();
+    }
     return nombre;
 }
 
@@ -74,7 +84,78 @@ float Computadora::getPrecio()
     return precio;
 }
 
-int Computadora::getCantidad()
+int Computadora::getCantidad(string miCodigo)
 {
+    ifstream readOut;
+    readOut.open("Computadora.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo )
+        {
+            if(codigo==miCodigo)
+            {
+                    break;
+            }
+        }
+        readOut.close();
+    }
     return cantidad;
 }
+
+Computadora* Computadora::instance=0;
+
+Computadora* Computadora::getInstance()
+{
+    if (instance == 0)
+        instance = new Computadora();
+    return instance;
+}
+
+void Computadora::getProducto(string miCodigo)
+{
+    ifstream readOut;
+    readOut.open("Computadora.txt");
+    if(readOut.is_open())
+    {
+        while( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo )
+        {
+            if(codigo==miCodigo)
+            {
+                cout<< "Datos del Producto:"        <<endl
+                    <<"Codigo: "<<codigo            <<endl
+                    <<"Nombre: "<<nombre            <<endl
+                    <<"Categoria: "<<categoria      <<endl
+                    <<"Precio: $"<<precio           <<endl
+                    <<"Stock: "<<cantidad           <<endl
+                    <<"Componente: "<<tipo          <<endl<<endl<<endl;
+                    break;
+            }
+        }
+        readOut.close();
+    }
+}
+
+
+void Computadora::modifyCantidad(string miCodigo, int stock)
+{
+        ifstream readOut;
+        readOut.open("Computadora.txt");
+        ofstream readIn;
+        readIn.open("temp.txt");
+        while ( readOut >> codigo >> nombre >> categoria >>  precio >> cantidad >> tipo )
+        {
+            if ( miCodigo != codigo)
+            {
+                readIn << codigo << ' ' << nombre << ' ' << categoria << ' ' << precio << ' ' << cantidad << ' ' << tipo <<endl;            }
+            else
+            {
+                readIn << codigo << ' ' << nombre << ' ' << categoria << ' ' << precio << ' ' << stock << ' ' << tipo <<endl;            }
+        }
+    readIn.close();
+    readOut.close();
+    remove("Computadora.txt");
+    rename("temp.txt","Computadora.txt");
+    cout <<endl<<endl<<endl;
+}
+
+
