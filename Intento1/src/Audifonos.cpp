@@ -6,7 +6,7 @@ Audifonos::Audifonos()
 }
 
 
-
+//Ingresa valores dentro del txt
 void Audifonos::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad,string miConexion,string miTier1,string miTier2)//,string miTier3,string miCaracteristica)
 {
     string line;
@@ -40,6 +40,7 @@ void Audifonos::setData(string miNombre, float miPrecio, string miCategoria, str
     //caracteristica=miCaracteristica;
 }
 
+//Muestra todos los productos
 void Audifonos::getData()
 {
     ifstream readOut;
@@ -123,6 +124,7 @@ int Audifonos::getCantidad(string miCodigo)
 
 Audifonos* Audifonos::instance=0;
 
+//singleton
 Audifonos* Audifonos::getInstance()
 {
     if (instance == 0)
@@ -130,6 +132,7 @@ Audifonos* Audifonos::getInstance()
     return instance;
 }
 
+//Muestra un producto segun el codigo ingresado
 void Audifonos::getProducto(string miCodigo)
 {
     ifstream readOut;
@@ -160,7 +163,7 @@ void Audifonos::getProducto(string miCodigo)
     }
 }
 
-
+//Modifica la cantidad, usada en la opcion 5
 void Audifonos::modifyCantidad(string miCodigo, int stock)
 {
         ifstream readOut;

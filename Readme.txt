@@ -22,6 +22,9 @@ Versión 1.0 29-06-2017
 Version 1.1 29-06-2017
     -Opcion 5 terminada.
 
+Version 1.2 30-06-2017
+    -Retoques
+
 ===============================================================================================
 Patrones de diseño=============================================================================
 ===============================================================================================
@@ -86,8 +89,8 @@ Menu de opciones================================================================
 
 Limitaciones conocidas:
      ======================
-     -No se pueden ingresar mas de 9 productos de una sola categoria debido a limitaciones de txt
-     -Debido al uso de txt como base de datos, el ordenamiento pasa a ser muy complejo
+     -No se pueden ingresar mas de 9 productos de una sola categoria debido a limitaciones de txt.
+     -Debido al uso de txt como base de datos, el ordenamiento pasa a ser muy complejo.
      
 ================================================================================
 Bugs ===========================================================================

@@ -286,7 +286,6 @@ public:
                         cout<<"error\n";
                     }
 
-
                     comp[1]='0'+p2;
                     comp[2]='\0';
                     //comp--;

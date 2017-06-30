@@ -7,36 +7,14 @@
 #include <iterator>
 #include <fstream>
 
-
 #include "Menu.h"
 
 
 using namespace std;
 
-
-void MostrarCodigo(string categoria);
-void MostrarNombre(string categoria);
-void MostrarProducto();
-
-/*int arr[]={1,2}
-
-int *ptr=arr;
-
-int temp;
-temp=*ptr;
-*ptr=*(ptr+1);
-*(ptr+1)=temp;*/
-
-// outpu  ptr=2  ptr+1=1
-
-
-//Variables globales
-//int p0,p1,p2,p3,p4,p5; //Contador de cada tipo de producto, codigo     pasado a menu.h
-
-
 int main()
 {
-    //Declaracion de instancias
+
     system("Title Proyecto Base de Datos");
 
 
@@ -54,7 +32,6 @@ int main()
     Menu *menu=new Menu;
 
     // execute
-
     do
     {
         printMenu(); cin>>op;
@@ -63,6 +40,7 @@ int main()
             {
             case 1:
                 {
+
                 menu->setComando(op1);
                 menu->buttonPressed();
                 break;
@@ -98,8 +76,6 @@ int main()
                 break;
                 }
             }
-        /*system("pause");
-        system("cls");*/
     }
     while(op!=6);
     delete opcion;
@@ -108,54 +84,6 @@ int main()
     delete op2;
     delete op3;
     delete op4;
-     delete op5;
+    delete op5;
     return 0;
 }
-
-
-
-
-/*void MostrarCodigo(string categoria);
-void MostrarNombre(string categoria);
-void MostrarProducto();
-
-
-void ordenPrecio(string categoria,vector<Producto *> productos)
-{
-    vector<int> pos;
-    int i=0,x=0;
-    for(;i<int(productos.size());i++)
-
-        if(productos[i]->getCategoria()==categoria)
-        {
-            pos.push_back(i);
-        }
-    }
-    vector <int>temp=pos;
-    for(i=0;i<int(pos.size());i++)
-    {
-        for(int j=0;j<int(pos.size());j++)
-        {
-            //if(strcmp(producto2[i],producto2[j])<0)
-            if(productos[i]->getPrecio()>productos[j]->getPrecio())
-            {
-                int p1;
-                p1=temp[i];
-                temp[i]=temp[j];
-                temp[j]=p1;
-            }
-        }
-    }
-    pos=temp;
-
-    i=0;
-    for(;i<int(pos.size());i++,x++)
-        productos[(pos[x])]->getData();
-}*/
-
-
-
-
-
-
-

@@ -38,7 +38,7 @@ float Clientes::getCapital(string miCodigo)
     return capital;
 }
 
-
+// Se verifica el codigo dentro de la opcion 5
 bool Clientes::verifyCode(string code)
 {
     string miCodigo;

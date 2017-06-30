@@ -166,7 +166,7 @@ void TV::modifyCantidad(string miCodigo, int stock)
             {
                 readIn<< codigo << ' ' << nombre << ' ' << categoria << ' ' << precio << ' ' << stock << ' ' << calidad << ' ' << caracteristicas << ' ' << pantallaTy << ' ' << tam <<endl;
             }
-    }
+        }
     readIn.close();
     readOut.close();
     remove("TV.txt");

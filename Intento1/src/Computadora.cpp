@@ -5,6 +5,8 @@ Computadora::Computadora()
 {
 
 }
+//ingresa valores al txt
+
 void Computadora::setData(string miNombre, float miPrecio, string miCategoria, string miCodigo, int miCantidad,string miTipo)
 {
     string line;
@@ -36,6 +38,7 @@ void Computadora::setData(string miNombre, float miPrecio, string miCategoria, s
     readOut.close();
 }
 
+//muestra todos los productos
 void Computadora::getData()
 {
     ifstream readOut;
@@ -119,6 +122,7 @@ int Computadora::getCantidad(string miCodigo)
     return cantidad;
 }
 
+//singleton
 Computadora* Computadora::instance=0;
 
 Computadora* Computadora::getInstance()
@@ -128,6 +132,7 @@ Computadora* Computadora::getInstance()
     return instance;
 }
 
+//Muestra un producto segun el codigo ingresado
 void Computadora::getProducto(string miCodigo)
 {
     ifstream readOut;
@@ -153,6 +158,7 @@ void Computadora::getProducto(string miCodigo)
 }
 
 
+//Modifica la cantidad, usada en la opcion 5
 void Computadora::modifyCantidad(string miCodigo, int stock)
 {
         ifstream readOut;
