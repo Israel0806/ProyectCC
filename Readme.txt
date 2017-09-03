@@ -1,3 +1,4 @@
+# Proyecto: Base de Datos 
 La carpeta contiene los siguientes archivos:
     ==========================================
     -Readme.txt : Este archivo.
@@ -11,12 +12,12 @@ La carpeta contiene los siguientes archivos:
     -CodCliente.txt: Este archivo contiene los datos de los codigos de los clientes.
 
 ===============================================================================================
-VersiÛn =======================================================================================
+Versi√≥n =======================================================================================
 ===============================================================================================
 
 Base de datos==================================================================================
 
-VersiÛn 1.0 29-06-2017
+Versi√≥n 1.0 29-06-2017
     -Version alfa
 
 Version 1.1 29-06-2017
@@ -26,7 +27,7 @@ Version 1.2 30-06-2017
     -Retoques
 
 ===============================================================================================
-Patrones de diseÒo=============================================================================
+Patrones de dise√±o=============================================================================
 ===============================================================================================
 Singleton:
     ===========================================================================================
@@ -38,16 +39,16 @@ Singleton:
 
 Command:
     ============================================================================================
-    - Tiene como objetivo encapsular una peticiÛn como un objeto,
+    - Tiene como objetivo encapsular una petici√≥n como un objeto,
       de modo que puedan parametrizarse otros objetos con distintas peticiones o colas de peticiones 
       y proporcionar soporte para realizar operaciones que puedan deshacerse.
     - Requiere de una interfaz comando que sera una ---> " class Command;"
-      clase abstracta ---> interfaz que expone el mÈtodo genÈrico "execute()".
+      clase abstracta ---> interfaz que expone el m√©todo gen√©rico "execute()".
     - Requiere de un Receiver ---> es el objeto que implementa la funcionalidad real. 
-      Alguno de sus mÈtodos ser· encapsulado por "Command.execute()".
-    - Requiere de una clase encargada de invocar el mÈtodo "Command.execute()". 
-      Posee una referencia (o varias) a Command, y su mÈtodo SetCommand le permite cambiar su funcionalidad en tiempo de ejecuciÛn. 
-      Ofrecer· tambiÈn un mÈtodo que invoque el mÈtodo "Command.Execute()" que, a su vez, invocar· "Receiver.MetodoAEncapsular()".
+      Alguno de sus m√©todos ser√° encapsulado por "Command.execute()".
+    - Requiere de una clase encargada de invocar el m√©todo "Command.execute()". 
+      Posee una referencia (o varias) a Command, y su m√©todo SetCommand le permite cambiar su funcionalidad en tiempo de ejecuci√≥n. 
+      Ofrecer√° tambi√©n un m√©todo que invoque el m√©todo "Command.Execute()" que, a su vez, invocar√° "Receiver.MetodoAEncapsular()".
 
 
 ===============================================================================================
